@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. Ahmed Kaffel | Applied Mathematics | Scientific Computing | University of Wisconsin–Milwaukee</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
+}
+
+#page {
+    max-width: 1100px;
+    margin: auto;
+}
+
+#header {
+    background-color: #002855;
+    padding: 15px;
+}
+
+#header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#header li {
+    display: inline;
+    margin: 0 20px;
+}
+
+#header a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#header a:hover {
+    color: #fdb515;
+}
+
+#main {
+    display: flex;
+    padding: 40px 20px;
+}
+
+.main_left {
+    width: 30%;
+    padding-right: 30px;
+}
+
+.main_right {
+    width: 70%;
+}
+
+.profile-img {
+    width: 180px;
+    border-radius: 6px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #002855;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.contact-box {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="Center.html">Research Center</a></li>
+</ul>
+</div>
+
+
+<div id="main">
+
+<div class="main_left">
+
+<img src="kaffel.jpg" class="profile-img">
+
+<div class="contact-box">
+
+<p><strong>Dr. Ahmed Kaffel, Ph.D.</strong></p>
+
+<p>
+Teaching Faculty III<br>
+Department of Mathematical Sciences<br>
+University of Wisconsin–Milwaukee
+</p>
+
+<p>
+EMS Building, Room E434<br>
+3200 N Cramer Street<br>
+Milwaukee, WI 53211
+</p>
+
+<p>
+Email: kaffel@uwm.edu<br>
+Phone: (414) 629-1090
+</p>
+
+</div>
+
+<br>
+
+<img src="DEPUWM.jpg" width="250">
+
+</div>
+
+
+<div class="main_right">
+
+<h1>Dr. Ahmed Kaffel</h1>
+
+<p>
+Applied Mathematician | Scientific Computing Expert | Mathematical Modeling Specialist
+</p>
+
+<br>
+
+<h2>Welcome</h2>
+
+<p>
+Welcome to my professional homepage. I am a faculty member in the 
+<a href="https://uwm.edu/math/">Department of Mathematical Sciences</a> at the University of Wisconsin–Milwaukee and an applied mathematician specializing in scientific computing, mathematical modeling, and computational methods for complex physical and engineering systems.
+</p>
+
+<p>
+I received my Ph.D. and M.S. in Mathematics from Virginia Polytechnic Institute and State University (Virginia Tech), one of the leading institutions in applied and computational mathematics. I also hold an M.S. in Engineering from the Tunisia Polytechnic School. My academic career includes research and faculty appointments at several internationally recognized institutions, including Brown University, the University of Maryland, Penn State University, and Marquette University.
+</p>
+
+<p>
+My research focuses on developing rigorous mathematical models and advanced computational methods to understand complex multiscale phenomena arising in fluid dynamics, porous media transport, multiphase systems, and engineering applications. My work integrates mathematical analysis, numerical methods, and high-performance computing to provide predictive and scientifically reliable solutions to challenging real-world problems.
+</p>
+
+<p>
+I have authored numerous peer-reviewed publications in leading international journals, including Physics of Fluids, International Journal of Multiphase Flow, and Transport in Porous Media. My research addresses fundamental and applied problems such as interfacial stability, pattern formation, multiphase transport, and computational modeling of complex physical systems across multiple spatial and temporal scales.
+</p>
+
+<p>
+In addition to my research activities, I am deeply committed to excellence in teaching and mentorship. I have extensive experience teaching undergraduate and graduate courses including Differential Equations, Linear Algebra, Numerical Analysis, Mathematical Modeling, and Scientific Computing. My teaching emphasizes analytical rigor, computational proficiency, and real-world applications, preparing students for successful careers in academia, industry, and research.
+</p>
+
+<p>
+My broader professional mission is to advance the frontiers of applied mathematics and scientific computing through impactful research, interdisciplinary collaboration, and the development of advanced computational tools that address critical challenges in science, engineering, and technology.
+</p>
+
+<p>
+I welcome collaborations with academic institutions, research laboratories, industry partners, and funding agencies.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+<p>
+© Dr. Ahmed Kaffel | University of Wisconsin–Milwaukee  
+</p>
+
+</div>
+
+
+</div>
+
+</body>
+</html>
