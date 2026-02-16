@@ -8,259 +8,256 @@
 
 <style>
 
+/* ===== PRESTIGE COLOR PALETTE ===== */
+
 :root{
---brand:#002855;
---accent:#fdb515;
---ink:#0f172a;
+--navy:#0b2545;
+--gold:#c5a46d;
+--text:#0f172a;
 --muted:#475569;
---line:#e5e7eb;
+--background:#f5f7fa;
 --card:#ffffff;
---soft:#f8fafc;
---shadow:0 10px 30px rgba(0,0,0,.08);
---radius:14px;
+--border:#e2e8f0;
+--shadow:0 12px 35px rgba(0,0,0,0.08);
+--radius:12px;
 }
+
+/* ===== GLOBAL ===== */
 
 body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:var(--soft);
-color:var(--ink);
+font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+background:var(--background);
+color:var(--text);
 line-height:1.75;
 }
 
+/* ===== TOP HEADER ===== */
+
+.header{
+background:linear-gradient(135deg,var(--navy),#133c73);
+color:white;
+padding:50px 20px 40px 20px;
+text-align:center;
+}
+
+.header h1{
+margin:0;
+font-size:38px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.header p{
+margin-top:10px;
+font-size:18px;
+opacity:.95;
+}
+
+/* ===== NAVIGATION ===== */
+
 .nav{
-background:var(--brand);
-padding:16px;
+background:white;
+border-bottom:1px solid var(--border);
+box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
 .nav .wrap{
 max-width:1150px;
 margin:auto;
 display:flex;
-justify-content:space-between;
-align-items:center;
+justify-content:center;
+padding:14px;
+gap:30px;
 }
 
-.brand{
-color:white;
-font-weight:700;
+.nav a{
 text-decoration:none;
-font-size:18px;
-}
-
-.links a{
-color:white;
-text-decoration:none;
-margin-left:22px;
+color:var(--navy);
 font-weight:600;
-font-size:15px;
 }
 
-.links a:hover{
-color:var(--accent);
+.nav a:hover{
+color:var(--gold);
 }
+
+/* ===== MAIN CONTAINER ===== */
 
 .container{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 padding:50px 20px;
 }
 
-.hero{
-background:white;
-padding:36px;
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-}
-
-.hero h1{
-margin:0;
-font-size:36px;
-}
-
-.hero p{
-margin-top:16px;
-color:var(--muted);
-font-size:17.5px;
-}
+/* ===== SECTION CARDS ===== */
 
 .section{
-margin-top:35px;
+margin-bottom:35px;
 }
 
 .card{
-background:white;
-padding:30px;
+background:var(--card);
+padding:35px;
 border-radius:var(--radius);
 box-shadow:var(--shadow);
+border:1px solid var(--border);
 }
 
 .card h2{
-color:var(--brand);
 margin-top:0;
-margin-bottom:12px;
+color:var(--navy);
+border-bottom:2px solid var(--gold);
+padding-bottom:8px;
+margin-bottom:18px;
+font-size:24px;
 }
 
 .card p{
 color:var(--muted);
-font-size:16.5px;
+font-size:17px;
 }
+
+/* ===== GRID ===== */
 
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:22px;
+gap:25px;
 }
 
+/* ===== LISTS ===== */
+
 ul{
-font-size:16.5px;
 color:var(--muted);
+font-size:17px;
 }
+
+li{
+margin-bottom:8px;
+}
+
+/* ===== FOOTER ===== */
 
 .footer{
 text-align:center;
-padding:35px;
-color:var(--muted);
+padding:40px;
 margin-top:40px;
-font-size:14.5px;
+font-size:14px;
+color:#64748b;
 }
 
+/* ===== MOBILE ===== */
+
 @media(max-width:900px){
+
 .grid{
 grid-template-columns:1fr;
 }
-.hero h1{
-font-size:30px;
+
+.header h1{
+font-size:28px;
 }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER -->
+
+<div class="header">
+
+<h1>Teaching, Mentorship, and Academic Leadership</h1>
+
+<p>
+Dr. Ahmed Kaffel • Applied Mathematics • Scientific Computing • Engineering and Biomedical Simulation
+</p>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
 <div class="nav">
 <div class="wrap">
 
-<a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
-
-<div class="links">
 <a href="index.html">Home</a>
 <a href="research.html">Research</a>
 <a href="publications.html">Publications</a>
 <a href="teaching.html">Teaching</a>
 <a href="contact.html">Contact</a>
-</div>
 
 </div>
 </div>
 
+
+<!-- CONTENT -->
 
 <div class="container">
 
-<div class="hero">
+<div class="section">
+<div class="card">
 
-<h1>Teaching, Mentorship, and Academic Leadership</h1>
+<h2>Academic Teaching Experience and Institutional Impact</h2>
 
 <p>
 
-Following his doctoral training and subsequent research appointments as a Research Associate Scientist at Brown University and the University of Maryland, Dr. Ahmed Kaffel developed an extensive and distinguished teaching career spanning over fifteen years across major research universities in the United States and internationally, including the University of Wisconsin–Milwaukee, Marquette University, Prince Sultan University, and Virginia Tech. He has taught extensively at these institutions, serving diverse undergraduate and graduate student populations and contributing significantly to the development of rigorous and modern mathematics curricula.
+Following his doctoral training and subsequent research appointments as a Research Associate Scientist at Brown University and the University of Maryland, Dr. Ahmed Kaffel developed an extensive and distinguished teaching career spanning over fifteen years across major research universities in the United States and internationally, including the University of Wisconsin–Milwaukee, Marquette University, Prince Sultan University, and Virginia Tech.
 
 </p>
 
 <p>
 
-He has taught both foundational and advanced courses central to applied mathematics, computational science, and engineering education. His teaching is closely informed by his active research program in scientific computing, numerical simulation, fluid dynamics, biomedical modeling, and computational engineering. This research-integrated approach enables students to engage directly with modern computational methods, advanced numerical algorithms, and interdisciplinary scientific applications.
+He has taught both foundational and advanced courses central to applied mathematics, computational science, and engineering education. His teaching is closely informed by his active research program in scientific computing, numerical simulation, fluid dynamics, biomedical modeling, and computational engineering, enabling students to engage directly with modern computational methods and interdisciplinary scientific applications.
 
 </p>
 
-<p>
-
-Through sustained excellence in instruction, curriculum development, and academic mentorship, he prepares students for graduate study, research careers, and professional roles in academia, engineering, national laboratories, and advanced technology industries.
-
-</p>
-
+</div>
 </div>
 
 
 <div class="section">
-
 <div class="card">
 
 <h2>Teaching Philosophy and Research-Integrated Instruction</h2>
 
 <p>
 
-Dr. Kaffel’s teaching philosophy is grounded in intellectual rigor, interdisciplinary integration, and research-informed instruction. He emphasizes conceptual clarity, analytical depth, and computational thinking, enabling students to develop strong mathematical foundations while applying modern computational methods to complex scientific and engineering problems.
+Dr. Kaffel’s teaching philosophy emphasizes intellectual rigor, interdisciplinary integration, and research-informed instruction. He integrates advanced computational tools including MATLAB, Python, and scientific simulation methods, enabling students to connect mathematical theory with real-world scientific and engineering challenges.
 
 </p>
 
 <p>
 
-He integrates advanced computational tools—including MATLAB, Python, numerical simulation platforms, and scientific computing frameworks—into his teaching. This approach bridges theoretical mathematics and practical computational applications, preparing students to address contemporary challenges in engineering, biomedical simulation, computational physics, and data-driven scientific research.
-
-</p>
-
-<p>
-
-He is fully prepared to teach and develop graduate-level courses in applied mathematics, scientific computing, computational engineering, and interdisciplinary computational science, contributing to the advancement of graduate education and research training.
+He is fully prepared to teach and develop graduate-level courses in applied mathematics, scientific computing, and computational engineering, contributing to the advancement of graduate education and interdisciplinary research training.
 
 </p>
 
 </div>
-
 </div>
 
 
 <div class="section">
-
 <div class="card">
 
 <h2>Student Supervision, Mentorship, and Research Training</h2>
 
 <p>
 
-Dr. Kaffel has supervised and mentored undergraduate and graduate students in research projects involving scientific computing, numerical simulation, fluid dynamics, biomedical modeling, and computational engineering. His mentorship focuses on developing students’ analytical thinking, computational expertise, and scientific independence.
+Dr. Kaffel has supervised and mentored undergraduate and graduate students in research projects involving scientific computing, numerical simulation, fluid dynamics, biomedical modeling, and computational engineering.
 
 </p>
 
 <p>
 
-He has actively participated in competitive student research initiatives, including preparation and submission of research proposals supporting undergraduate research participation through programs such as the Summer Undergraduate Research Fellowship (SURF). Through these efforts, he has helped train students for graduate programs, research careers, and technical leadership positions.
-
-</p>
-
-<p>
-
-His educational mission includes training the next generation of researchers, engineers, and computational scientists capable of addressing complex interdisciplinary challenges in science, engineering, and medicine.
+He has actively participated in competitive student research initiatives, including preparation and submission of research proposals supporting undergraduate research participation through programs such as the Summer Undergraduate Research Fellowship (SURF), helping train future scientists and engineers.
 
 </p>
 
 </div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Educational Leadership and Curriculum Development</h2>
-
-<p>
-
-Dr. Kaffel has played a significant leadership role in course coordination, curriculum development, and instructional innovation. He has coordinated multi-section courses and contributed to the development and modernization of computational and applied mathematics curricula, integrating numerical simulation, high-performance computing, and applied mathematical modeling into academic programs.
-
-</p>
-
-<p>
-
-He has taught large and diverse student populations and has made substantial contributions to undergraduate and graduate education in applied mathematics, computational science, and engineering.
-
-</p>
-
-</div>
-
 </div>
 
 
@@ -270,7 +267,7 @@ He has taught large and diverse student populations and has made substantial con
 
 <div class="card">
 
-<h2>Courses and Instructional Areas</h2>
+<h2>Instructional Areas</h2>
 
 <ul>
 
@@ -279,7 +276,6 @@ He has taught large and diverse student populations and has made substantial con
 <li>Linear Algebra and Matrix Theory</li>
 <li>Numerical Analysis and Scientific Computing</li>
 <li>Mathematical Modeling and Computational Engineering</li>
-<li>Applied Mathematics and Computational Science</li>
 
 </ul>
 
@@ -287,13 +283,12 @@ He has taught large and diverse student populations and has made substantial con
 
 <div class="card">
 
-<h2>Computational and Interdisciplinary Teaching Expertise</h2>
+<h2>Computational Teaching Expertise</h2>
 
 <ul>
 
-<li>Scientific Computing and Numerical Simulation</li>
-<li>High-Performance Computing and Parallel Simulation</li>
-<li>Machine Learning for Scientific and Engineering Applications</li>
+<li>Scientific Computing and High-Performance Simulation</li>
+<li>Machine Learning for Scientific Applications</li>
 <li>Computational Engineering and Multiphysics Modeling</li>
 <li>Biomedical Modeling and Computational Medicine</li>
 <li>Fluid Dynamics and Engineering Applications</li>
@@ -308,48 +303,38 @@ He has taught large and diverse student populations and has made substantial con
 
 
 <div class="section">
-
 <div class="card">
 
-<h2>Academic Service, Scholarly Activity, and Professional Engagement</h2>
+<h2>Academic Service and Professional Contributions</h2>
 
 <p>
 
-Dr. Kaffel actively contributes to academic service and institutional leadership. He has served as an elected member of academic award committees and has contributed to academic and research development through grant proposal preparation, student research programs, and interdisciplinary collaborations.
+Dr. Kaffel has served as an elected member of academic award committees and actively contributes to academic service, grant proposal development, student research initiatives, and scholarly activities including journal publications, conference presentations, and book chapters.
 
 </p>
 
 <p>
 
-His scholarly contributions include peer-reviewed journal publications, conference presentations, and book chapters in applied mathematics, computational science, fluid dynamics, and engineering modeling. He regularly participates in academic workshops, conferences, and professional development activities to continuously enhance teaching effectiveness and integrate emerging computational technologies into mathematics education.
+He regularly participates in academic workshops and professional development activities, ensuring continuous integration of emerging scientific and computational advances into mathematics education.
 
 </p>
 
 </div>
-
 </div>
 
 
 <div class="section">
-
 <div class="card">
 
-<h2>Educational Mission and Institutional Impact</h2>
+<h2>Educational Mission</h2>
 
 <p>
 
-Dr. Kaffel’s educational mission is to advance excellence in mathematics, computational science, and engineering education through rigorous instruction, research-integrated teaching, and student mentorship. His teaching prepares students to contribute to scientific innovation, technological advancement, and interdisciplinary research at the highest levels.
-
-</p>
-
-<p>
-
-Through sustained excellence in teaching, mentorship, curriculum development, and academic service, he continues to make significant contributions to higher education and the training of future scientists, engineers, and computational researchers.
+Dr. Kaffel’s educational mission is to train the next generation of scientists, engineers, and computational researchers through rigorous, modern, and interdisciplinary mathematical education that prepares students for leadership in academia, industry, and advanced research environments.
 
 </p>
 
 </div>
-
 </div>
 
 
@@ -359,7 +344,7 @@ Through sustained excellence in teaching, mentorship, curriculum development, an
 <div class="footer">
 
 © Dr. Ahmed Kaffel  
-Applied Mathematician • Computational Scientist • Engineering and Biomedical Simulation Researcher
+University of Wisconsin–Milwaukee
 
 </div>
 
