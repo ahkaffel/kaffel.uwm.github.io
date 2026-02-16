@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dr. Ahmed Kaffel — Applied Mathematician, Engineering Scientist, and Civil Engineer. Scientific computing, multiscale modeling, CFD, porous media transport, inverse problems, biomedical simulation, and high-performance numerical methods." />
+<title>Dr. Ahmed Kaffel | Applied Mathematics • Scientific Computing • Civil Engineering</title>
+
+<style>
+  :root{
+    --ink:#0f172a;
+    --muted:#475569;
+    --line:#e5e7eb;
+    --bg:#ffffff;
+    --soft:#f8fafc;
+    --brand:#002855;
+    --accent:#fdb515;
+    --card:#ffffff;
+    --shadow: 0 8px 24px rgba(15,23,42,.08);
+    --radius:14px;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+  }
+
+  /* Top Nav */
+  .nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(0,40,85,.98);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:saturate(180%) blur(8px);
+  }
+  .nav .wrap{
+    max-width:1180px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .brand{
+    color:#fff; text-decoration:none;
+    font-weight:700; letter-spacing:.2px;
+    white-space:nowrap;
+  }
+  .links{display:flex; flex-wrap:wrap; gap:16px; justify-content:flex-end}
+  .links a{
+    color:#fff; text-decoration:none; font-weight:600; font-size:15px;
+    opacity:.92;
+  }
+  .links a:hover{color:var(--accent); opacity:1}
+
+  /* Layout */
+  .container{max-width:1180px; margin:auto; padding:44px 18px}
+  .hero{
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap:34px;
+    align-items:start;
+  }
+
+  /* Left card */
+  .side{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    position:sticky; top:78px;
+  }
+  .photo{
+    width:100%;
+    border-radius:12px;
+    border:1px solid var(--line);
+    display:block;
+  }
+  .name{
+    margin:16px 0 4px 0;
+    font-size:22px;
+    font-weight:800;
+  }
+  .role{margin:0; color:var(--muted); font-weight:600}
+  .affil{margin:10px 0 0 0; color:var(--muted); font-size:14.5px}
+  .kv{margin-top:14px; padding-top:14px; border-top:1px solid var(--line); font-size:14.5px; color:var(--muted)}
+  .kv strong{color:var(--ink)}
+  .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    font-weight:700;
+    font-size:14.5px;
+    color:var(--brand);
+    background:#fff;
+  }
+  .btn.primary{
+    background:var(--brand);
+    color:#fff;
+    border-color:rgba(255,255,255,.12);
+  }
+  .btn:hover{border-color:#cbd5e1}
+  .btn.primary:hover{background:#001f41}
+
+  /* Main content */
+  .main h1{
+    margin:0;
+    font-size:40px;
+    letter-spacing:-.4px;
+    line-height:1.15;
+  }
+  .subtitle{
+    margin:10px 0 0 0;
+    color:var(--muted);
+    font-size:18px;
+    font-weight:600;
+  }
+
+  .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+  .pill{
+    background:var(--soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--ink);
+    font-weight:700;
+    font-size:13.5px;
+  }
+
+  .section{margin-top:34px}
+  .section h2{
+    margin:0 0 14px 0;
+    font-size:22px;
+    letter-spacing:-.2px;
+    color:var(--brand);
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:20px;
+  }
+
+  .grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .grid3{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:14px;
+  }
+
+  .card h3{
+    margin:0 0 8px 0;
+    font-size:17px;
+    color:var(--ink);
+  }
+  .card p{margin:0; color:var(--muted)}
+  .card ul{margin:10px 0 0 18px; color:var(--muted)}
+  .card li{margin:6px 0}
+
+  .kicker{
+    font-weight:800; color:var(--ink);
+  }
+
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+
+  .callout{
+    border:1px solid rgba(253,181,21,.35);
+    background:linear-gradient(180deg, rgba(253,181,21,.10), rgba(248,250,252,1));
+  }
+
+  .foot{
+    margin-top:44px;
+    padding:22px 18px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    text-align:center;
+    font-size:14px;
+  }
+
+  @media (max-width: 980px){
+    .hero{grid-template-columns:1fr}
+    .side{position:relative; top:auto}
+    .grid3{grid-template-columns:1fr}
+    .grid2{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr}
+    .main h1{font-size:34px}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Ahmed Kaffel</a>
+    <div class="links">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="hero">
+
+    <!-- LEFT -->
+    <aside class="side">
+      <img class="photo" src="kaffel.jpg" alt="Dr. Ahmed Kaffel" />
+      <div class="name">Dr. Ahmed Kaffel, Ph.D.</div>
+      <p class="role">Applied Mathematician • Engineering Scientist • Civil Engineer</p>
+      <p class="affil">
+        Teaching Faculty III, Department of Mathematical Sciences<br/>
+        University of Wisconsin–Milwaukee
+      </p>
+
+      <div class="kv">
+        <div><strong>Email:</strong> kaffel@uwm.edu</div>
+        <div><strong>Office:</strong> EMS Building, Room E434</div>
+        <div><strong>Location:</strong> Milwaukee, Wisconsin (USA)</div>
+      </div>
+
+      <div class="btns">
+        <a class="btn primary" href="CV25F.pdf">CV (PDF)</a>
+        <a class="btn" href="res26.pdf">Research Statement</a>
+        <a class="btn" href="teach25.pdf">Teaching Statement</a>
+      </div>
+
+      <div class="kv" style="margin-top:16px">
+        <div class="kicker">Education</div>
+        <div>Ph.D., Mathematics — Virginia Tech</div>
+        <div>M.S., Mathematics — Virginia Tech</div>
+        <div>M.S., Mathematical Engineering — Tunisia Polytechnic School</div>
+        <div>National Engineering Diploma — Civil Engineering</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT -->
+    <main class="main">
+      <h1>Applied Mathematics & Scientific Computing for Complex Systems</h1>
+      <p class="subtitle">
+        I develop advanced mathematical models, high-performance numerical simulation, and AI-driven inverse methods
+        for computational medicine, biomedical systems, fluid mechanics, porous media transport, and industrial-scale
+        computational engineering—bridging theory, computation, and real-world impact.
+      </p>
+
+      <div class="pillrow">
+        <span class="pill">Computational Medicine & Biomedical Simulation</span>
+        <span class="pill">Computational Physiology</span>
+        <span class="pill">Medical Imaging & Inverse Modeling</span>
+        <span class="pill">Applied Mathematics & Modeling</span>
+        <span class="pill">Scientific Computing</span>
+        <span class="pill">CFD & Multiphase Flow</span>
+        <span class="pill">Porous Media & Multiscale Systems</span>
+        <span class="pill">HPC & Parallel Simulation</span>
+        <span class="pill">AI/ML for Scientific Computing</span>
+      </div>
+
+      <!-- Priority Spotlight -->
+      <div class="section">
+        <h2>Priority Research Interests</h2>
+        <div class="card callout">
+          <p>
+            <strong>Computational Medicine & Biomedical Simulation.</strong> I develop advanced mathematical models,
+            high-performance simulation, and AI-driven inverse methods to analyze physiological systems, medical imaging,
+            and disease mechanisms—supporting next-generation healthcare technologies and precision medicine.
+          </p>
+          <ul>
+            <li><strong>Biomedical modeling & simulation</strong> for cardiovascular systems, tissue transport, and medical imaging</li>
+            <li><strong>Computational physiology</strong> and multiscale biological transport</li>
+            <li><strong>Medical imaging & inverse modeling</strong> (regularized reconstruction, wavelets, meshless discretization)</li>
+            <li><strong>Computational biomedicine</strong> integrating mechanistic models with data-driven inference</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Professional Overview -->
+      <div class="section">
+        <h2>Professional Overview</h2>
+        <div class="card">
+          <p>
+            I am an Applied Mathematician, Engineering Scientist, and Civil Engineer with extensive experience in
+            <strong>applied mathematics and mathematical modeling</strong>, <strong>scientific computing and numerical methods</strong>,
+            and <strong>computational engineering</strong>. My research is best summarized as the development of novel numerical methods—
+            combined with classical tools of applied mathematics—to solve physical and biomedical problems of current interest,
+            including fluid mechanics, porous media, inverse problems, and computational medicine.
+          </p>
+          <p style="margin-top:10px">
+            My academic and research appointments have included Brown University and the University of Maryland (Research Associate Scientist),
+            and faculty positions at Prince Sultan University, Marquette University, and the University of Wisconsin–Milwaukee.
+            Across these roles, I have led and contributed to interdisciplinary efforts spanning modeling, simulation, and data-driven
+            scientific computing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Research Expertise (NEW + requested) -->
+      <div class="section">
+        <h2>Research Expertise</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Modeling, Physics, and Engineering</h3>
+            <ul>
+              <li>Applied Mathematics and Mathematical Modeling</li>
+              <li>Differential Equations and Computational Physics</li>
+              <li>Fluid Dynamics and Multiphase Flow Simulation</li>
+              <li>Porous Media Transport and Multiscale Systems</li>
+              <li>Computational Engineering and Industrial Modeling</li>
+              <li>Computational Medicine & Biomedical Simulation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Computation, Data, and AI</h3>
+            <ul>
+              <li>Scientific Computing and Numerical Methods</li>
+              <li>High-Performance Computing and Parallel Simulation</li>
+              <li>Parallel scientific computing & high-performance numerical simulation</li>
+              <li>Machine Learning for Scientific and Engineering Applications</li>
+              <li>Machine Learning for Scientific Computing (physics-informed + data-driven)</li>
+              <li>Data Science, visualization, and inverse modeling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research at a glance -->
+      <div class="section">
+        <h2>Research at a Glance</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>Medical Imaging & Inverse Modeling</h3>
+            <p>
+              Wavelet-based, meshless reconstruction algorithms (e.g., MIT), including regularized inversion for
+              high-resolution conductivity imaging and uncertainty-aware reconstruction.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Porous Media & Multiscale Transport</h3>
+            <p>
+              Volume-averaged, Richards-type macroscopic models capturing unsaturated flow, inter-layer mass exchange,
+              and deformation in multilayered thin swelling porous structures.
+            </p>
+          </div>
+          <div class="card">
+            <h3>CFD, Multiphase Flow & Stability</h3>
+            <p>
+              Hydrodynamic stability, turbulence modeling, interfacial modes, thin-film dynamics, and microchannel/microgap flows
+              with rigorous spectral and eigenvalue-based analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signature contributions -->
+      <div class="section">
+        <h2>Signature Contributions</h2>
+        <div class="grid2">
+
+          <div class="card">
+            <h3>Wavelet Meshless MIT Imaging (Inverse Problem)</h3>
+            <p>
+              Developing wavelet-based discretization of MIT convolution integrals to reduce reliance on precisely known target boundaries,
+              enabling adaptive spatial resolution. Integrates SVD-based inversion, regularized least squares, and error-aware reconstruction.
+            </p>
+            <ul>
+              <li>Meshless wavelet discretization of kernels and conductivity fields</li>
+              <li>Regularization for underdetermined inversion with limited sensor data</li>
+              <li>Applied linear algebra, optimization, and scalable computational workflows</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Industrial-Grade Porous Media Modeling (Thin Swelling Layers)</h3>
+            <p>
+              Rigorous volume-averaging upscaling frameworks reducing micro-scale transport to efficient macroscopic models,
+              with closure relations for inter-layer exchange and deformation—supporting fast, reliable simulation for design decisions.
+            </p>
+            <ul>
+              <li>Unsaturated flow + deformation modeling in multilayer porous structures</li>
+              <li>Validated FEM-based simulation pipelines for product-performance prediction</li>
+              <li>Extensions to energy systems and other thin porous media applications</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Multiphase Microgap Flow: Instabilities & Thin Films</h3>
+            <p>
+              Stability analysis of viscous two-layer flows in microchannels/microgaps using modified Orr–Sommerfeld formulations
+              solved via Chebyshev collocation and QZ eigenvalue methods to predict interfacial instability and thin-film rupture.
+            </p>
+            <ul>
+              <li>Full eigenspectrum computation; asymptotics matched with numerics</li>
+              <li>Mode competition (shear vs interfacial), growth-rate maxima, nonlinear evolution</li>
+              <li>Predictive tools relevant to microfluidics, coatings, and thermal systems</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Shear-Flow Stability in Complex Fluids</h3>
+            <p>
+              Viscoelastic shear-flow stability (upper-convected Maxwell model), emphasizing inertia–elasticity coupling in transition mechanisms,
+              supported by efficient spectral solvers and validation against asymptotic regimes.
+            </p>
+            <ul>
+              <li>Spectral/eigenvalue solvers for stability of Poiseuille/Couette/shear layers/jets</li>
+              <li>Free-surface and short-wave instability mechanisms in complex fluids</li>
+              <li>Rigorous mathematical analysis with high-fidelity computational validation</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Methods & Tools -->
+      <div class="section">
+        <h2>Computational & Numerical Methods</h2>
+        <div class="split">
+          <div class="card">
+            <h3>PDE Solvers and Discretizations</h3>
+            <ul>
+              <li>Finite Difference Methods</li>
+              <li>Finite Element Methods (FEM)</li>
+              <li>Discontinuous Galerkin Methods (DG)</li>
+              <li>Finite Volume Methods (FVM)</li>
+              <li>Spectral / pseudospectral methods</li>
+              <li>Boundary Element Methods (BEM)</li>
+              <li>ENO/WENO high-order methods</li>
+              <li>ALE (moving-mesh) formulations</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Scientific Computing, HPC, and AI</h3>
+            <ul>
+              <li>Parallel scientific computing and high-performance numerical simulation</li>
+              <li>Applied linear algebra: SVD, QZ, regularization, ill-posed inversion</li>
+              <li>Optimization, inverse problems, and uncertainty/error-aware modeling</li>
+              <li>Machine Learning for Scientific Computing (physics-informed + data-driven)</li>
+              <li>Machine Learning for Scientific and Engineering Applications</li>
+              <li>Data science and visualization for interpretable computational modeling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teaching & mentorship -->
+      <div class="section">
+        <h2>Teaching, Mentorship, and Inclusive Excellence</h2>
+        <div class="card">
+          <p>
+            My teaching emphasizes rigor, clarity, and real-world relevance. I integrate computation (MATLAB, Python, and modern simulation tools)
+            with mathematical foundations in differential equations, linear algebra, numerical analysis, and modeling.
+            I am committed to accessible STEM pathways and high-impact mentorship—preparing students for graduate study,
+            research careers, and advanced technical roles.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hiring positioning -->
+      <div class="section">
+        <h2>Collaboration and Hiring Interests</h2>
+        <div class="card">
+          <p>
+            I welcome collaborations and professional opportunities in applied mathematics, computational science, biomedical simulation,
+            scientific computing, and engineering modeling. I am particularly interested in roles that value rigorous mathematical modeling,
+            advanced numerical methods, high-performance simulation, and interdisciplinary impact—across academia, national laboratories, healthcare
+            technology, and industry.
+          </p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="foot">
+    © Dr. Ahmed Kaffel — Applied Mathematics • Scientific Computing • Civil Engineering
+  </div>
+</div>
+
+</body>
+</html>
