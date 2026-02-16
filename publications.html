@@ -8,20 +8,114 @@
 
 <style>
 
-:root{
-  --accent:#002855;
-  --text:#111;
-  --muted:#555;
-  --border:#e5e7eb;
-  --bg:#ffffff;
-}
+
 
 body{
-  margin:0;
-  font-family:"Segoe UI", Arial, sans-serif;
-  background:white;
-  color:var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
 }
+
+.wrap{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+
+header{
+    background-color: #ffffff;
+    border-bottom: 2px solid #002855;
+    padding: 15px;
+}
+
+.title h1{
+    color: #002855;
+    margin: 0;
+}
+
+.sub{
+    color:#555;
+}
+
+/* Navigation */
+
+.navbtn{
+    background-color:#ffffff;
+    border:1px solid #ccc;
+    padding:8px 14px;
+    margin-right:8px;
+    color:#002855;
+    border-radius:5px;
+}
+
+.navbtn.primary{
+    background-color:#002855;
+    color:white;
+}
+
+/* Cards */
+
+.card{
+    background-color:white;
+    border:1px solid #ddd;
+    border-radius:6px;
+    padding:18px;
+    margin-top:20px;
+}
+
+/* Publications */
+
+.pub{
+    border-bottom:1px solid #eee;
+    padding:10px 0;
+}
+
+.pub-title{
+    font-weight:600;
+    color:#002855;
+}
+
+.pub-meta{
+    color:#555;
+}
+
+/* Tags */
+
+.tag{
+    background:#002855;
+    color:white;
+    padding:3px 6px;
+    border-radius:4px;
+    font-size:11px;
+}
+
+/* Sidebar */
+
+.metric{
+    border:1px solid #ddd;
+    padding:12px;
+    border-radius:6px;
+    margin-top:10px;
+}
+
+/* Search */
+
+.search input{
+    border:1px solid #ccc;
+    padding:8px;
+    width:100%;
+}
+
+/* Footer */
+
+footer{
+    color:#777;
+    margin-top:20px;
+}
+
 
 .wrap{
   max-width:1100px;
