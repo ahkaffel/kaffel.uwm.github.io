@@ -28,7 +28,7 @@ color:var(--ink);
 line-height:1.7;
 }
 
-/* NAV */
+/* NAVIGATION */
 
 .nav{
 background:var(--brand);
@@ -47,13 +47,15 @@ align-items:center;
 color:white;
 font-weight:700;
 text-decoration:none;
+font-size:18px;
 }
 
 .links a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:22px;
 font-weight:600;
+font-size:15px;
 }
 
 .links a:hover{
@@ -70,29 +72,29 @@ padding:50px 20px;
 
 .hero{
 background:white;
-padding:30px;
+padding:35px;
 border-radius:var(--radius);
 box-shadow:var(--shadow);
 }
 
 .hero h1{
 margin:0;
-font-size:34px;
+font-size:36px;
 }
 
 .hero p{
-margin-top:10px;
+margin-top:14px;
 color:var(--muted);
-font-size:17px;
+font-size:17.5px;
 }
 
 .section{
-margin-top:30px;
+margin-top:35px;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:28px;
 border-radius:var(--radius);
 box-shadow:var(--shadow);
 }
@@ -100,6 +102,12 @@ box-shadow:var(--shadow);
 .card h2{
 color:var(--brand);
 margin-top:0;
+margin-bottom:12px;
+}
+
+.card p{
+color:var(--muted);
+font-size:16.5px;
 }
 
 .grid{
@@ -109,19 +117,24 @@ gap:20px;
 }
 
 ul{
-font-size:16px;
+font-size:16.5px;
+color:var(--muted);
 }
 
 .footer{
 text-align:center;
-padding:30px;
+padding:35px;
 color:var(--muted);
 margin-top:40px;
+font-size:14.5px;
 }
 
 @media(max-width:900px){
 .grid{
 grid-template-columns:1fr;
+}
+.hero h1{
+font-size:30px;
 }
 }
 
@@ -130,9 +143,13 @@ grid-template-columns:1fr;
 
 <body>
 
+<!-- NAVIGATION -->
+
 <div class="nav">
 <div class="wrap">
+
 <a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
+
 <div class="links">
 <a href="index.html">Home</a>
 <a href="research.html">Research</a>
@@ -140,22 +157,34 @@ grid-template-columns:1fr;
 <a href="teaching.html">Teaching</a>
 <a href="contact.html">Contact</a>
 </div>
+
 </div>
 </div>
+
+<!-- MAIN CONTENT -->
 
 <div class="container">
 
 <div class="hero">
 
-<h1>Teaching and Mentorship</h1>
+<h1>Teaching and Educational Leadership</h1>
 
 <p>
 
-My teaching is grounded in innovation, interdisciplinarity, and inclusion. I design courses that build strong mathematical foundations while preparing students to solve real-world problems in engineering, science, data science, and computational modeling.
+Dr. Ahmed Kaffel brings over fifteen years of distinguished university-level teaching experience across leading research institutions in the United States and internationally, including the University of Wisconsin–Milwaukee, Marquette University, Prince Sultan University, and Virginia Tech. Throughout his academic career, he has demonstrated sustained excellence in instruction, curriculum delivery, and academic leadership, teaching and coordinating a wide range of undergraduate and graduate courses in applied mathematics, scientific computing, and engineering-related disciplines.
+
+</p>
+
+<p>
+
+His teaching integrates rigorous mathematical foundations with modern computational methods, high-performance scientific computing, and real-world applications in engineering, biomedical modeling, data science, and computational physics. This interdisciplinary approach equips students with both deep theoretical understanding and advanced computational skills, preparing them for graduate study, research careers, and leadership roles in academia, national laboratories, and industry.
 
 </p>
 
 </div>
+
+
+<!-- TEACHING PHILOSOPHY -->
 
 <div class="section">
 
@@ -165,25 +194,53 @@ My teaching is grounded in innovation, interdisciplinarity, and inclusion. I des
 
 <p>
 
-My passion for teaching mathematics has been a defining element of my academic career. Across diverse institutions in the United States and internationally, I have taught undergraduate and graduate courses, mentored students in research, and continually refined my approach to education. My teaching philosophy is anchored in innovation, interdisciplinarity, and inclusion.
+Dr. Kaffel’s teaching philosophy is grounded in intellectual rigor, research-informed instruction, and interdisciplinary integration. His instructional approach emphasizes conceptual clarity, analytical depth, and computational proficiency, enabling students to understand fundamental mathematical principles while applying them to complex scientific and engineering problems.
 
 </p>
 
 <p>
 
-I integrate modern computational tools such as MATLAB, Python, Mathematica, and Fortran into my courses, enabling students to develop practical computational skills alongside mathematical understanding. These tools empower students to engage with contemporary scientific and engineering challenges.
+He integrates modern computational tools—including MATLAB, Python, numerical simulation platforms, and scientific computing frameworks—into his courses to bridge theory and practice. By connecting mathematics to contemporary challenges in engineering, biomedical simulation, fluid dynamics, machine learning, and data-driven science, he empowers students to develop the skills necessary to address real-world technological and scientific problems.
 
 </p>
 
 <p>
 
-I emphasize conceptual understanding, critical thinking, and active learning. My courses connect mathematics to applications in engineering, biomedical systems, physics, and data science, enabling students to appreciate the power of mathematics in solving complex real-world problems.
+His teaching reflects a strong commitment to academic excellence, inclusive education, and student-centered learning. He fosters a rigorous and supportive intellectual environment that promotes critical thinking, innovation, and independent problem-solving, enabling students from diverse backgrounds to achieve their full academic and professional potential.
 
 </p>
 
 </div>
 
 </div>
+
+
+<!-- EDUCATIONAL LEADERSHIP -->
+
+<div class="section">
+
+<div class="card">
+
+<h2>Educational Leadership and Mentorship</h2>
+
+<p>
+
+Dr. Kaffel has played a significant leadership role in higher education through multi-section course coordination, curriculum development, and student mentorship. He has successfully mentored and trained hundreds of undergraduate and graduate students, guiding their intellectual development and preparing them for advanced academic study, research careers, and professional positions in engineering, computational science, and applied mathematics.
+
+</p>
+
+<p>
+
+His mentorship emphasizes the development of analytical thinking, mathematical maturity, computational expertise, and scientific independence. Students under his supervision have gained valuable experience in numerical simulation, scientific computing, mathematical modeling, and interdisciplinary research, positioning them for success in graduate programs, research laboratories, and technical industries.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- COURSES AND EXPERTISE -->
 
 <div class="section">
 
@@ -191,25 +248,17 @@ I emphasize conceptual understanding, critical thinking, and active learning. My
 
 <div class="card">
 
-<h2>Courses Taught</h2>
+<h2>Courses and Instructional Expertise</h2>
 
 <ul>
 
-<li>Calculus (Undergraduate and Advanced)</li>
-
-<li>Differential Equations (ODE and PDE)</li>
-
+<li>Calculus and Advanced Calculus</li>
 <li>Linear Algebra and Matrix Theory</li>
-
+<li>Differential Equations (ODE and PDE)</li>
 <li>Numerical Analysis and Scientific Computing</li>
-
-<li>Mathematical Modeling and Simulation</li>
-
-<li>Finite Mathematics</li>
-
-<li>Linear Programming</li>
-
-<li>Applied Mathematics and Computational Engineering</li>
+<li>Mathematical Modeling and Computational Engineering</li>
+<li>Partial Differential Equations and Applied Mathematics</li>
+<li>Finite Mathematics and Applied Analysis</li>
 
 </ul>
 
@@ -217,21 +266,16 @@ I emphasize conceptual understanding, critical thinking, and active learning. My
 
 <div class="card">
 
-<h2>Computational and Applied Teaching Areas</h2>
+<h2>Computational and Interdisciplinary Teaching Areas</h2>
 
 <ul>
 
-<li>Scientific Computing and Numerical Methods</li>
-
-<li>Machine Learning and Data Science</li>
-
-<li>Computational Engineering and Modeling</li>
-
-<li>Multiscale Modeling and Simulation</li>
-
-<li>Inverse Problems and Biomedical Simulation</li>
-
-<li>Computational Fluid Dynamics and Engineering Applications</li>
+<li>Scientific Computing and Numerical Simulation</li>
+<li>High-Performance Computing and Computational Modeling</li>
+<li>Machine Learning and Data Science for Scientific Applications</li>
+<li>Computational Engineering and Multiphysics Simulation</li>
+<li>Biomedical Modeling and Computational Medicine</li>
+<li>Fluid Dynamics, Porous Media, and Engineering Applications</li>
 
 </ul>
 
@@ -241,27 +285,8 @@ I emphasize conceptual understanding, critical thinking, and active learning. My
 
 </div>
 
-<div class="section">
 
-<div class="card">
-
-<h2>Student Mentorship and Research Supervision</h2>
-
-<p>
-
-I have mentored undergraduate and graduate students in research projects involving multiscale modeling, numerical simulation, fluid mechanics, and medical imaging. Students under my supervision have developed advanced computational methods and gained valuable research experience.
-
-</p>
-
-<p>
-
-My mentorship emphasizes developing students’ analytical thinking, computational skills, and confidence, preparing them for graduate study and careers in academia, industry, and engineering.
-
-</p>
-
-</div>
-
-</div>
+<!-- INTERNATIONAL EXPERIENCE -->
 
 <div class="section">
 
@@ -271,23 +296,32 @@ My mentorship emphasizes developing students’ analytical thinking, computation
 
 <p>
 
-I have taught students across multiple institutions including the University of Wisconsin–Milwaukee, Marquette University, Virginia Tech, Prince Sultan University, and the University of Tunis. These diverse teaching experiences have strengthened my ability to teach students from a wide range of academic and cultural backgrounds.
+Dr. Kaffel has taught across major universities in the United States and internationally, working with students from diverse academic, cultural, and disciplinary backgrounds. His global teaching experience has strengthened his ability to deliver high-quality instruction in diverse educational environments while maintaining the highest standards of academic rigor and excellence.
 
 </p>
 
 </div>
 
 </div>
+
+
+<!-- EDUCATIONAL MISSION -->
 
 <div class="section">
 
 <div class="card">
 
-<h2>Commitment to Excellence in Education</h2>
+<h2>Educational Mission and Commitment</h2>
 
 <p>
 
-My goal is to inspire students to see mathematics as a powerful tool for solving meaningful problems in science, engineering, medicine, and technology. I strive to create an inclusive, rigorous, and supportive learning environment that promotes intellectual growth and prepares students for success in research and professional careers.
+Dr. Kaffel’s educational mission is to train the next generation of scientists, engineers, and computational researchers by providing rigorous, modern, and interdisciplinary mathematical education. He is deeply committed to advancing excellence in STEM education and preparing students to contribute to scientific innovation, technological advancement, and interdisciplinary research.
+
+</p>
+
+<p>
+
+Through his dedication to teaching, mentorship, and academic leadership, he continues to make a lasting impact on student success and the advancement of mathematical and computational education.
 
 </p>
 
@@ -295,13 +329,19 @@ My goal is to inspire students to see mathematics as a powerful tool for solving
 
 </div>
 
+
 </div>
+
+
+<!-- FOOTER -->
 
 <div class="footer">
 
-© Dr. Ahmed Kaffel | University of Wisconsin–Milwaukee
+© Dr. Ahmed Kaffel  
+Applied Mathematician • Computational Scientist • Engineering and Biomedical Simulation Researcher
 
 </div>
+
 
 </body>
 </html>
