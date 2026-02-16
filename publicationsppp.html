@@ -1,887 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Selected Publications & Scientific Presentations | Dr. Ahmed Kaffel</title>
-  <meta name="description" content="Selected peer-reviewed publications, book chapters, invited talks, and conference presentations by Dr. Ahmed Kaffel (Applied Mathematics, Scientific Computing, CFD, Porous Media, Inverse Problems)." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selected Publications & Scientific Presentations | Dr. Ahmed Kaffel</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#0f1a2f;
-      --text:#e9eefc;
-      --muted:#b8c2e3;
-      --muted2:#8f9ac4;
-      --accent:#7dd3fc;
-      --accent2:#a78bfa;
-      --good:#34d399;
-      --warn:#fbbf24;
-      --border:rgba(255,255,255,.10);
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1120px;
-    }
+<style>
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1000px 600px at 15% 10%, rgba(125,211,252,.18), transparent 55%),
-        radial-gradient(900px 600px at 85% 15%, rgba(167,139,250,.16), transparent 55%),
-        radial-gradient(900px 700px at 50% 85%, rgba(52,211,153,.08), transparent 55%),
-        linear-gradient(180deg, #070b14 0%, var(--bg) 65%, #070b14 100%);
-    }
+/* ===== ELITE PROFESSIONAL COLOR SYSTEM ===== */
 
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
+:root{
 
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+--bg-main:#0f172a;
+--bg-secondary:#111827;
+--card-bg:rgba(255,255,255,0.07);
+--card-bg-soft:rgba(255,255,255,0.045);
 
-    header{
-      display:flex; gap:18px; align-items:flex-start; justify-content:space-between;
-      padding:26px 22px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--border);
-      border-radius:calc(var(--radius) + 6px);
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    header:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:radial-gradient(600px 250px at 10% 0%, rgba(125,211,252,.22), transparent 60%),
-                 radial-gradient(600px 250px at 90% 0%, rgba(167,139,250,.20), transparent 60%);
-      pointer-events:none;
-      opacity:.9;
-    }
-    header > *{position:relative; z-index:1}
+--text-main:#f1f5ff;
+--text-secondary:#c7d2fe;
+--text-muted:#9aa6d1;
 
-    .title h1{margin:0 0 6px; font-size:28px; letter-spacing:.2px}
-    .title .sub{margin:0; color:var(--muted); line-height:1.45}
-    .inst{margin-top:6px; color:var(--muted2); font-size:13px; line-height:1.5}
+--accent-blue:#60a5fa;
+--accent-purple:#a78bfa;
+--accent-cyan:#22d3ee;
+--accent-green:#34d399;
 
-    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-    .badge{
-      display:inline-flex; align-items:center; gap:7px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:12.5px;
-      white-space:nowrap;
-    }
-    .dot{width:8px;height:8px;border-radius:50%}
-    .dot.a{background:var(--accent)}
-    .dot.b{background:var(--accent2)}
-    .dot.c{background:var(--good)}
-    .dot.d{background:var(--warn)}
+--border-soft:rgba(255,255,255,0.12);
+--border-accent:rgba(96,165,250,0.35);
 
-    nav{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-      margin-top:2px;
-    }
-    .navbtn{
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-size:13px;
-      text-decoration:none;
-      transition:transform .12s ease, background .12s ease;
-    }
-    .navbtn:hover{transform:translateY(-1px); background:rgba(255,255,255,.07); text-decoration:none}
-    .navbtn.primary{
-      background:linear-gradient(90deg, rgba(125,211,252,.18), rgba(167,139,250,.16));
-      border-color:rgba(125,211,252,.35);
-    }
+--shadow-elite:
+0 10px 40px rgba(0,0,0,0.35),
+0 0 0 1px rgba(255,255,255,0.04);
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:16px;
-      margin-top:16px;
-    }
-    @media (max-width: 980px){
-      .grid{grid-template-columns:1fr}
-      nav{justify-content:flex-start}
-    }
+}
 
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px 18px;
-    }
-    .card h2{margin:0 0 10px; font-size:18px}
-    .card p{margin:0; color:var(--muted); line-height:1.6}
+/* ===== BACKGROUND ===== */
 
-    .callout{
-      background:linear-gradient(180deg, rgba(125,211,252,.12), rgba(255,255,255,.03));
-      border:1px solid rgba(125,211,252,.25);
-    }
+body{
 
-    .two{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    @media (max-width: 740px){
-      .two{grid-template-columns:1fr}
-    }
+margin:0;
 
-    .tools{
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      margin-top:12px;
-      padding-top:12px;
-      border-top:1px dashed rgba(255,255,255,.12);
-    }
-    .search{
-      flex:1 1 260px;
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(0,0,0,.18);
-    }
-    .search input{
-      width:100%;
-      background:transparent;
-      border:none;
-      outline:none;
-      color:var(--text);
-      font-size:14px;
-    }
-    .pillrow{display:flex; gap:8px; flex-wrap:wrap}
-    .pill{
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:12.5px;
-      cursor:pointer;
-      user-select:none;
-    }
-    .pill.active{
-      border-color:rgba(125,211,252,.38);
-      color:var(--text);
-      background:rgba(125,211,252,.10);
-    }
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Arial,
+sans-serif;
 
-    .section{margin-top:16px}
-    .section h3{
-      margin:0 0 10px;
-      font-size:16px;
-      color:var(--text);
-      letter-spacing:.2px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    .section h3 .bar{
-      height:10px; width:10px; border-radius:3px;
-      background:linear-gradient(180deg, var(--accent), var(--accent2));
-      box-shadow:0 0 0 4px rgba(125,211,252,.12);
-    }
+color:var(--text-main);
 
-    .publist{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:10px}
-    .pub{
-      padding:14px 14px;
-      border-radius:16px;
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(0,0,0,.18), rgba(255,255,255,.02));
-      position:relative;
-    }
-    .pub:hover{border-color:rgba(125,211,252,.22)}
-    .pub .top{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .pub .title{
-      margin:0 0 5px;
-      font-weight:650;
-      color:var(--text);
-      line-height:1.35;
-    }
-    .pub .meta{
-      margin:0;
-      color:var(--muted);
-      line-height:1.5;
-      font-size:13.5px;
-    }
-    .pub .tags{
-      display:flex; flex-wrap:wrap; gap:6px;
-      margin-top:10px;
-    }
-    .tag{
-      padding:6px 9px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.03);
-      color:var(--muted2);
-      font-size:12px;
-    }
-    .tag.key{border-color:rgba(52,211,153,.25); color:#c7ffe9; background:rgba(52,211,153,.08)}
-    .tag.inv{border-color:rgba(125,211,252,.25); color:#d7f3ff; background:rgba(125,211,252,.08)}
-    .tag.plen{border-color:rgba(251,191,36,.28); color:#fff2c7; background:rgba(251,191,36,.08)}
-    .tag.sel{border-color:rgba(167,139,250,.30); color:#efe7ff; background:rgba(167,139,250,.10)}
+background:
 
-    .links{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-    .linkbtn{
-      display:inline-flex; align-items:center; gap:7px;
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-size:12.5px;
-      text-decoration:none;
-    }
-    .linkbtn:hover{background:rgba(255,255,255,.07); text-decoration:none}
+radial-gradient(
+900px 500px at 10% 5%,
+rgba(96,165,250,0.15),
+transparent 60%
+),
 
-    .side h2{margin-top:0}
-    .metric{
-      display:flex; flex-direction:column; gap:6px;
-      padding:12px 12px;
-      border:1px solid var(--border);
-      border-radius:16px;
-      background:rgba(0,0,0,.16);
-      margin-top:10px;
-    }
-    .metric .k{color:var(--muted2); font-size:12.5px}
-    .metric .v{font-size:14.5px; color:var(--text); line-height:1.45}
-    .small{font-size:12.5px; color:var(--muted2); line-height:1.55}
+radial-gradient(
+900px 500px at 90% 10%,
+rgba(167,139,250,0.12),
+transparent 60%
+),
 
-    .gridmini{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      margin-top:10px;
-    }
-    @media (max-width: 980px){
-      .gridmini{grid-template-columns:1fr}
-    }
+radial-gradient(
+800px 600px at 50% 100%,
+rgba(34,211,238,0.08),
+transparent 60%
+),
 
-    footer{
-      margin-top:18px;
-      color:var(--muted2);
-      font-size:12.5px;
-      line-height:1.6;
-      padding:0 4px;
-    }
+linear-gradient(
+180deg,
+var(--bg-main),
+var(--bg-secondary)
+);
 
-    /* subtle "Selected" ribbon */
-    .selectedRibbon{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-top:10px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(167,139,250,.30);
-      background:linear-gradient(90deg, rgba(167,139,250,.14), rgba(125,211,252,.10));
-      color:var(--text);
-      font-size:13px;
-      font-weight:600;
-    }
-  </style>
+}
+
+/* ===== CONTAINER ===== */
+
+.container{
+
+max-width:1100px;
+margin:auto;
+padding:30px;
+
+}
+
+/* ===== HEADER ===== */
+
+.header{
+
+background:linear-gradient(
+180deg,
+rgba(255,255,255,0.09),
+rgba(255,255,255,0.04)
+);
+
+padding:25px;
+
+border-radius:16px;
+
+border:1px solid var(--border-soft);
+
+box-shadow:var(--shadow-elite);
+
+}
+
+.header h1{
+
+margin:0;
+font-size:28px;
+
+background:linear-gradient(
+90deg,
+var(--accent-blue),
+var(--accent-purple)
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.subtitle{
+
+color:var(--text-secondary);
+margin-top:5px;
+
+}
+
+.selected-badge{
+
+margin-top:12px;
+
+display:inline-block;
+
+padding:8px 14px;
+
+border-radius:20px;
+
+background:linear-gradient(
+90deg,
+rgba(96,165,250,0.25),
+rgba(167,139,250,0.20)
+);
+
+border:1px solid var(--border-accent);
+
+font-weight:600;
+
+}
+
+/* ===== CARD ===== */
+
+.card{
+
+background:var(--card-bg);
+
+padding:20px;
+
+margin-top:18px;
+
+border-radius:16px;
+
+border:1px solid var(--border-soft);
+
+box-shadow:var(--shadow-elite);
+
+}
+
+.card h2{
+
+margin-top:0;
+color:var(--accent-blue);
+
+}
+
+/* ===== PUBLICATION ITEM ===== */
+
+.pub{
+
+background:var(--card-bg-soft);
+
+padding:15px;
+
+margin-top:12px;
+
+border-radius:12px;
+
+border:1px solid var(--border-soft);
+
+transition:0.25s;
+
+}
+
+.pub:hover{
+
+border:1px solid var(--border-accent);
+
+transform:translateY(-2px);
+
+box-shadow:0 5px 25px rgba(0,0,0,0.4);
+
+}
+
+.pub-title{
+
+font-weight:600;
+margin-bottom:5px;
+
+}
+
+.pub-meta{
+
+color:var(--text-muted);
+font-size:14px;
+
+}
+
+/* ===== TAG ===== */
+
+.tag{
+
+display:inline-block;
+
+margin-top:8px;
+margin-right:6px;
+
+padding:5px 10px;
+
+border-radius:12px;
+
+font-size:12px;
+
+background:rgba(34,211,238,0.12);
+
+border:1px solid rgba(34,211,238,0.35);
+
+}
+
+/* ===== BUTTON ===== */
+
+.btn{
+
+display:inline-block;
+
+margin-top:8px;
+
+padding:6px 12px;
+
+border-radius:10px;
+
+background:rgba(96,165,250,0.18);
+
+border:1px solid var(--border-accent);
+
+color:white;
+
+text-decoration:none;
+
+font-size:13px;
+
+}
+
+.btn:hover{
+
+background:rgba(96,165,250,0.30);
+
+}
+
+/* ===== SIDEBAR ===== */
+
+.sidebar{
+
+background:var(--card-bg);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid var(--border-soft);
+
+box-shadow:var(--shadow-elite);
+
+}
+
+.metric{
+
+margin-top:12px;
+
+padding:12px;
+
+background:var(--card-bg-soft);
+
+border-radius:12px;
+
+border:1px solid var(--border-soft);
+
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+
+margin-top:30px;
+
+color:var(--text-muted);
+
+font-size:13px;
+
+}
+
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="title">
-        <h1>Selected Publications & Scientific Presentations</h1>
-        <p class="sub">
-          Dr. Ahmed Kaffel — Applied Mathematics • Scientific Computing • CFD • Porous Media • Inverse Problems
-        </p>
-        <div class="inst">
-          Faculty, Department of Mathematical Sciences, University of Wisconsin–Milwaukee
-        </div>
-
-        <div class="selectedRibbon" title="Curated highlights for employers and collaborators">
-          <span class="dot b" aria-hidden="true"></span> Selected highlights curated for employers & collaborators
-        </div>
-
-        <div class="badges" aria-label="Highlights">
-          <span class="badge"><span class="dot a"></span> Top venues: <em>Physics of Fluids</em>, <em>IJHMT</em>, <em>JNNFM</em></span>
-          <span class="badge"><span class="dot b"></span> Invited: NASA • Caltech • SIAM • AMS • APS • InterPore</span>
-          <span class="badge"><span class="dot c"></span> Multiscale modeling + high-performance scientific computing</span>
-          <span class="badge"><span class="dot d"></span> Strong record across theory, computation, and applications</span>
-        </div>
-      </div>
-
-      <div>
-        <nav aria-label="Page navigation">
-          <a class="navbtn" href="index.html">Homepage</a>
-          <a class="navbtn" href="research.html">Research</a>
-          <a class="navbtn" href="teaching.html">Teaching</a>
-          <a class="navbtn primary" href="publications.html">Publications</a>
-          <a class="navbtn" href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <div class="grid">
-      <main>
-
-        <!-- TOP: IMPACT SNAPSHOT + FEATURED -->
-        <section class="card callout">
-          <h2>Research Profile — Selected Highlights</h2>
-          <p>
-            I develop rigorous mathematical and computational frameworks for multiphase flow stability,
-            multiscale porous-media transport (including swelling/unsaturated systems), and inverse problems.
-            My work combines theory, numerical methods, and scientific computing with strong engineering relevance.
-          </p>
-
-          <div class="gridmini" aria-label="Research snapshot">
-            <div class="metric">
-              <div class="k">Core strengths</div>
-              <div class="v">CFD & instability • Swelling/unsaturated porous media • Multiscale modeling • Inverse problems • Scientific computing</div>
-            </div>
-            <div class="metric">
-              <div class="k">Visibility & dissemination</div>
-              <div class="v">Invited presentations at NASA Stennis / U.S. Naval Research Laboratory and Caltech; strong presence at SIAM, AMS, APS, and InterPore</div>
-            </div>
-          </div>
-
-          <div class="tools" role="region" aria-label="Filter and search tools">
-            <div class="search" aria-label="Search publications">
-              <span aria-hidden="true">🔎</span>
-              <input id="q" type="text" placeholder="Search: porous, instability, wavelet, InterPore, NASA, SIAM..." />
-            </div>
-            <div class="pillrow" aria-label="Quick filters">
-              <span class="pill active" data-filter="all">All</span>
-              <span class="pill" data-filter="selected">Selected</span>
-              <span class="pill" data-filter="journal">Journals</span>
-              <span class="pill" data-filter="chapter">Book chapters</span>
-              <span class="pill" data-filter="talk">Talks</span>
-              <span class="pill" data-filter="poster">Posters</span>
-            </div>
-          </div>
-        </section>
-
-        <!-- FEATURED / SELECTED -->
-        <section class="card section" id="featured">
-          <h3><span class="bar"></span>Selected Featured Contributions</h3>
-          <ul class="publist">
-
-            <li class="pub item selected journal" data-keywords="selected featured physics of fluids 2015 eigenspectra mode coalescence instability two-fluid flows riaz">
-              <p class="title">Eigenspectra and mode coalescence of temporal instability in two-fluid flows</p>
-              <p class="meta"><strong>A. Kaffel</strong>, A. Riaz — <em>Physics of Fluids</em>, 2015</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag key">Multiphase flow</span>
-                <span class="tag key">Stability / spectra</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://dx.doi.org/10.1063/1.4916404" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item selected journal" data-keywords="selected featured ijhmt 2019 mass exchange closure unsaturated flow porous media pillai feldkamp tower">
-              <p class="title">A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai, J. Feldkamp, T. Tower — <em>International Journal of Heat and Mass Transfer</em>, 2019</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag key">Porous media</span>
-                <span class="tag key">Unsaturated flow</span>
-                <span class="tag key">Multiscale closure</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://www.sciencedirect.com/science/article/pii/S0017931018360897" target="_blank" rel="noopener">Publisher</a>
-              </div>
-            </li>
-
-            <li class="pub item selected journal" data-keywords="selected featured ijhmt 2019 rigorous derivation macroscopic model partially saturated swelling porous media 10.1016">
-              <p class="title">Rigorous derivation of a new macroscopic model for partially saturated flow in multilayered thin swelling porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong> — <em>International Journal of Heat and Mass Transfer</em>, Vol. 129 (2019), pp. 1274–1286</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag key">Model derivation</span>
-                <span class="tag key">Swelling porous media</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item selected talk" data-keywords="selected featured nasa invited seminar stennis naval research laboratory waves flow instabilities 2017">
-              <p class="title">Waves and flow instabilities problems (Invited seminar)</p>
-              <p class="meta"><strong>A. Kaffel</strong> — NASA Stennis Space Center / U.S. Naval Research Laboratory, July 26–29, 2017</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Invited seminar</span>
-                <span class="tag key">Instabilities</span>
-              </div>
-            </li>
-
-            <li class="pub item selected talk" data-keywords="selected featured caltech 2019 socams wavelet image reconstruction magnetic induction tomography inverse problems">
-              <p class="title">Wavelet algorithms for high-resolution image reconstruction in magnetic induction tomography</p>
-              <p class="meta"><strong>A. Kaffel</strong> — SOCAMS, Caltech, Pasadena, CA, Apr 27, 2019</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Invited talk</span>
-                <span class="tag key">Inverse problems</span>
-                <span class="tag key">Imaging</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://cmx.caltech.edu/socams/Talks2019.pdf" target="_blank" rel="noopener">Program PDF</a>
-              </div>
-            </li>
-
-            <li class="pub item selected talk" data-keywords="selected featured interpore 2025 albuquerque multiphase flow thin absorbent swelling porous materials pillai">
-              <p class="title">Modeling Multiphase Flow in Thin Absorbent Swelling Porous Materials</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2025 (17th International Conference on Porous Media), Albuquerque, NM, USA, May 19–22, 2025</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Conference</span>
-                <span class="tag key">Porous media</span>
-                <span class="tag key">Swelling</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://events.interpore.org/event/56/contributions/7339/" target="_blank" rel="noopener">Conference page</a>
-              </div>
-            </li>
-
-          </ul>
-        </section>
-
-        <!-- JOURNAL PAPERS -->
-        <section class="card section" id="journals">
-          <h3><span class="bar"></span>Peer-Reviewed Journal Publications</h3>
-          <ul class="publist">
-
-            <li class="pub item journal" data-keywords="wavelet regularization fredholm inverse problems imaging feldkamp 2020">
-              <p class="title">Wavelet algorithms based on regularization for ill-posed Fredholm integral equations of the first kind</p>
-              <p class="meta"><strong>A. Kaffel</strong>, J. Feldkamp — <em>International Journal</em>, 2020 (details as listed on your page)</p>
-              <div class="tags">
-                <span class="tag key">Inverse problems</span>
-                <span class="tag key">Wavelets</span>
-                <span class="tag key">Scientific computing</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://www.mscsnet.mu.edu/~ahmed/https" target="_blank" rel="noopener">Link</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="mass exchange closure unsaturated flow porous media heat mass transfer pillai feldkamp tower 2019">
-              <p class="title">A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai, J. Feldkamp, T. Tower — <em>International Journal of Heat and Mass Transfer</em>, 2019</p>
-              <div class="tags">
-                <span class="tag key">Porous media</span>
-                <span class="tag key">Unsaturated flow</span>
-                <span class="tag key">Multiscale modeling</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://www.sciencedirect.com/science/article/pii/S0017931018360897" target="_blank" rel="noopener">Publisher</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="macroscopic model partially saturated multilayer thin swelling porous media heat mass transfer 2019 10.1016">
-              <p class="title">Rigorous derivation of a new macroscopic model for partially saturated flow in multilayered thin swelling porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong> — <em>International Journal of Heat and Mass Transfer</em>, Vol. 129 (2019), pp. 1274–1286</p>
-              <div class="tags">
-                <span class="tag key">Swelling porous media</span>
-                <span class="tag key">Model derivation</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="eigenspectra mode coalescence temporal instability two-fluid flows physics of fluids 2015 riaz">
-              <p class="title">Eigenspectra and mode coalescence of temporal instability in two-fluid flows</p>
-              <p class="meta"><strong>A. Kaffel</strong>, A. Riaz — <em>Physics of Fluids</em>, Vol. 27(4), 2015</p>
-              <div class="tags">
-                <span class="tag key">CFD & stability</span>
-                <span class="tag key">Multiphase flow</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://dx.doi.org/10.1063/1.4916404" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="waves instabilities adiabatic flow microgap channels multiphase flow 2016 bar-cohen holloway riaz">
-              <p class="title">Waves and instabilities in high quality adiabatic flow in microgap channels</p>
-              <p class="meta">S. A. Bar-Cohen, C. Holloway, <strong>A. Kaffel</strong>, A. Riaz — <em>International Journal of Multiphase Flow</em>, Vol. 83 (2016), pp. 62–76</p>
-              <div class="tags">
-                <span class="tag key">Multiphase microflows</span>
-                <span class="tag key">Instability</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://dx.doi.org/10.1016/j.ijmultiphaseflow.2016.03.016" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="surface modes inviscid free surface shear flows zamm 2011 renardy 10.1002">
-              <p class="title">Surface modes in inviscid free surface shear flows</p>
-              <p class="meta"><strong>A. Kaffel</strong>, M. Renardy — <em>ZAMM – Journal of Applied Mathematics and Mechanics</em>, Vol. 91(8) (2011), pp. 649–652</p>
-              <div class="tags">
-                <span class="tag key">Free-surface flows</span>
-                <span class="tag key">Stability theory</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://doi.org/10.1002/zamm.201000165" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="stability plane parallel viscoelastic shear flows infinite weissenberg reynolds numbers jnnfm 2010 renardy">
-              <p class="title">On the stability of plane parallel viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers</p>
-              <p class="meta"><strong>A. Kaffel</strong>, M. Renardy — <em>Journal of Non-Newtonian Fluid Mechanics</em>, Vol. 165 (2010), pp. 1670–1676</p>
-              <div class="tags">
-                <span class="tag key">Viscoelastic flows</span>
-                <span class="tag key">Asymptotic stability</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://www.sciencedirect.com/science/article/pii/S0377025710002454?via%3Dihub" target="_blank" rel="noopener">Publisher</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="fuel cell polymer electrolyte membrane water transport 2018 open access biostat bioinform">
-              <p class="title">On Modeling Water Transport in Polymer Electrolyte Membrane Fuel Cell</p>
-              <p class="meta"><strong>A. Kaffel</strong> — <em>Open Access Biostatistics & Bioinformatics</em>, 2018</p>
-              <div class="tags">
-                <span class="tag key">Energy systems</span>
-                <span class="tag key">Transport modeling</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://crimsonpublishers.com/oabb/pdf/OABB.000503.pdf" target="_blank" rel="noopener">PDF</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="bag of words multiscale color descriptors image analysis abdedayem kaffel ben hamida 2018">
-              <p class="title">A New Strategy of the Bag-of-Word Method with a Multi-scale Representation for Evaluating Color Pairwise Descriptors</p>
-              <p class="meta">F. Abdedayem, <strong>A. Kaffel</strong>, A. Ben Hamida — <em>Open Access Biostatistics & Bioinformatics</em>, 2018</p>
-              <div class="tags">
-                <span class="tag key">ML / Vision</span>
-                <span class="tag key">Multiscale descriptors</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://crimsonpublishers.com/oabb/abstract/OABB.000516.php" target="_blank" rel="noopener">Abstract</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="naca2415 airfoil wind turbine wedging angle 30 fluid mechanics thermal sciences 2015">
-              <p class="title">Fluid dynamic study of a NACA2415 airfoil-type wind turbine with wedging angle 30°</p>
-              <p class="meta">T. Chelbi, Z. Driss, <strong>A. Kaffel</strong>, M. Salah Abid — <em>International Journal of Fluid Mechanics and Thermal Sciences</em>, Vol. 1(3) (2015), pp. 54–58</p>
-              <div class="tags">
-                <span class="tag key">Wind energy</span>
-                <span class="tag key">CFD</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://doi.org/10.11648/j.ijfmts.20150103.13" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="wind tunnel meshing model choice naca2415 numerical experimental journal of physical mathematics 2015">
-              <p class="title">Numerical and experimental investigations on the meshing model choice of a NACA 2415 airfoil wind turbine in an open wind tunnel</p>
-              <p class="meta">Z. Driss, T. Chelbi, W. Barhoumi, <strong>A. Kaffel</strong>, M.S. Abid — <em>Journal of Physical Mathematics</em>, Vol. 6(2) (2015), pp. 1–5</p>
-              <div class="tags">
-                <span class="tag key">CFD + experiments</span>
-                <span class="tag key">Wind tunnel</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://dx.doi.org/10.4172/2090-0902.1000141" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="static study wedging angle effect naca2415 wind turbine 2014 world research journal">
-              <p class="title">Static study of the wedging angle effect of a NACA 2415 airfoil-type wind turbine</p>
-              <p class="meta">Z. Driss, T. Chelbi, <strong>A. Kaffel</strong>, M.S. Abid — <em>World Research Journal of Engineering and Technology</em>, Vol. 3(1) (2014), pp. 1–8</p>
-              <div class="tags">
-                <span class="tag key">Aerodynamics</span>
-                <span class="tag key">Design analysis</span>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="instabilities gas liquid fluidized beds far east journal applied mathematics 2013">
-              <p class="title">Instabilities in gas- and liquid-fluidized beds</p>
-              <p class="meta"><strong>A. Kaffel</strong> — <em>Far East Journal of Applied Mathematics</em>, Vol. 80(1) (2013), pp. 19–39</p>
-              <div class="tags">
-                <span class="tag key">Fluidized beds</span>
-                <span class="tag key">Instability</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://www.pphmj.com/journals/articles/1126.htm" target="_blank" rel="noopener">Link</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="numerical simulation three-dimensional mixed convection lid-driven square cavity far east journal 2013">
-              <p class="title">Numerical simulation of three-dimensional mixed convection in a lid-driven square cavity</p>
-              <p class="meta"><strong>A. Kaffel</strong> — <em>Far East Journal of Applied Mathematics</em>, Vol. 80(2) (2013), pp. 67–78</p>
-              <div class="tags">
-                <span class="tag key">Numerical simulation</span>
-                <span class="tag key">Convection</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://www.pphmj.com/journals/articles/1131.htm" target="_blank" rel="noopener">Link</a>
-              </div>
-            </li>
-
-            <li class="pub item journal" data-keywords="wall friction momentum dispersion free surface flows roughness soualmia masbernat kaffel physical chemical news">
-              <p class="title">Wall friction and momentum dispersion in free surface flows with non-uniform wall roughness</p>
-              <p class="meta">A. Soualmia, L. Masbernat, <strong>A. Kaffel</strong> — <em>Physical and Chemical News</em>, Vol. 51 (2010), pp. 11–18</p>
-              <div class="tags">
-                <span class="tag key">Environmental flows</span>
-                <span class="tag key">Momentum dispersion</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://www.pcnjournal.com/105102_1949.htm" target="_blank" rel="noopener">Link</a>
-              </div>
-            </li>
-
-          </ul>
-        </section>
-
-        <!-- BOOK CHAPTERS -->
-        <section class="card section" id="chapters">
-          <h3><span class="bar"></span>Book Chapters</h3>
-          <ul class="publist">
-
-            <li class="pub item chapter" data-keywords="book chapter elastic effects inviscid instability shear flows turbulent flows nova science 2012">
-              <p class="title">Elastic effects on the inviscid instability of shear flows</p>
-              <p class="meta"><strong>A. Kaffel</strong> — In: <em>Turbulent Flows: Prediction, Modeling and Analysis</em>, Nova Science Publishers, 2012</p>
-              <div class="tags">
-                <span class="tag key">Instability theory</span>
-                <span class="tag key">Turbulence & modeling</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://www.gbv.de/dms/tib-ub-hannover/740080695.pdf" target="_blank" rel="noopener">Book PDF</a>
-              </div>
-            </li>
-
-            <li class="pub item chapter" data-keywords="book chapter environmental hydraulics momentum dispersion wall friction free surface flows crc press 2009">
-              <p class="title">Momentum dispersion and wall friction in free surface flows above non-uniform bottom roughness</p>
-              <p class="meta">A. Soualmia, L. Masbernat, S. Zaouali, <strong>A. Kaffel</strong> — In: <em>Environmental Hydraulics: Theoretical, Experimental and Computational Solutions</em>, CRC Press, 2009, pp. 97–101</p>
-              <div class="tags">
-                <span class="tag key">Environmental hydraulics</span>
-                <span class="tag key">Modeling</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://doi.org/10.1201/b10999" target="_blank" rel="noopener">DOI</a>
-              </div>
-            </li>
-
-            <li class="pub item chapter" data-keywords="book chapter wicking in porous materials chapter 3 2026 forthcoming modeling unsaturated flow thin multilayer swelling porous">
-              <p class="title">Modeling Unsaturated Flow in Thin Multi-Layered Media Made of Absorbent Swelling Porous Materials (Chapter 3, forthcoming)</p>
-              <p class="meta"><strong>A. Kaffel</strong> — In: <em>Wicking in Porous Materials</em>, 2026 (forthcoming)</p>
-              <div class="tags">
-                <span class="tag key">Porous media</span>
-                <span class="tag key">Wicking</span>
-                <span class="tag key">Multiscale modeling</span>
-              </div>
-            </li>
-
-          </ul>
-        </section>
-
-        <!-- TALKS & POSTERS -->
-        <section class="card section" id="talks">
-          <h3><span class="bar"></span>Invited Talks, Conference Presentations & Posters</h3>
-          <ul class="publist">
-
-            <li class="pub item talk selected" data-keywords="selected interpore 2025 albuquerque multiphase flow thin absorbent swelling porous materials pillai">
-              <p class="title">Modeling Multiphase Flow in Thin Absorbent Swelling Porous Materials</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2025, Albuquerque, NM, USA, May 19–22, 2025</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Conference</span>
-                <span class="tag key">Swelling porous media</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://events.interpore.org/event/56/contributions/7339/" target="_blank" rel="noopener">Conference page</a>
-              </div>
-            </li>
-
-            <li class="pub item poster" data-keywords="siam great lakes 2025 poster advanced multiscale modeling simulation unsaturated flow swelling porous media illinois institute of technology">
-              <p class="title">Advanced Multiscale Modeling and Simulation of Unsaturated Flow in Swelling Porous Media (Poster)</p>
-              <p class="meta"><strong>A. Kaffel</strong> — SIAM Great Lakes Section Annual Meeting, Illinois Institute of Technology, Sept 27–28, 2025</p>
-              <div class="tags">
-                <span class="tag">Poster</span>
-                <span class="tag key">Multiscale simulation</span>
-                <span class="tag key">Porous media</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://sites.google.com/view/glsiam2025/home?authuser=0" target="_blank" rel="noopener">Meeting page</a>
-              </div>
-            </li>
-
-            <li class="pub item talk" data-keywords="ic3m 2019 two-phase annular flow instability microchannels">
-              <p class="title">Two-phase annular flow instability in microchannels</p>
-              <p class="meta"><strong>A. Kaffel</strong> — IC3M’2019, Sousse, Tunisia, Dec 20–22, 2019</p>
-              <div class="tags">
-                <span class="tag inv">Conference talk</span>
-                <span class="tag key">Multiphase instability</span>
-              </div>
-            </li>
-
-            <li class="pub item talk selected" data-keywords="selected caltech 2019 socams wavelet algorithms image reconstruction magnetic induction tomography inverse problems">
-              <p class="title">Wavelet algorithms for high-resolution image reconstruction in magnetic induction tomography</p>
-              <p class="meta"><strong>A. Kaffel</strong> — SOCAMS, Caltech, Pasadena, CA, Apr 27, 2019</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Invited talk</span>
-                <span class="tag key">Inverse problems</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="http://cmx.caltech.edu/socams/Talks2019.pdf" target="_blank" rel="noopener">Program PDF</a>
-              </div>
-            </li>
-
-            <li class="pub item talk" data-keywords="interpore 2018 partially-saturated flow multilayer thin swelling porous media pillai">
-              <p class="title">On modeling partially-saturated flow of a liquid in multilayered thin swelling porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2018, New Orleans, USA, May 14–17, 2018</p>
-              <div class="tags">
-                <span class="tag inv">Conference talk</span>
-                <span class="tag key">Unsaturated flow</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://events.interpore.org/event/2/contributions/470/" target="_blank" rel="noopener">Conference page</a>
-              </div>
-            </li>
-
-            <li class="pub item poster" data-keywords="interpore 2018 poster wicking partially saturated flow thin swelling porous media">
-              <p class="title">Wicking as partially-saturated flow in thin swelling porous media (Poster)</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2018, New Orleans, USA, May 14–17, 2018</p>
-              <div class="tags">
-                <span class="tag">Poster</span>
-                <span class="tag key">Wicking</span>
-              </div>
-              <div class="links">
-                <a class="linkbtn" href="https://events.interpore.org/event/2/contributions/910/contribution.pdf" target="_blank" rel="noopener">Poster PDF</a>
-              </div>
-            </li>
-
-            <li class="pub item talk selected" data-keywords="selected nasa stennis naval research laboratory invited seminar waves flow instabilities 2017">
-              <p class="title">Waves and flow instabilities problems (Invited seminar)</p>
-              <p class="meta"><strong>A. Kaffel</strong> — NASA Stennis Space Center / U.S. Naval Research Laboratory, July 26–29, 2017</p>
-              <div class="tags">
-                <span class="tag sel">Selected</span>
-                <span class="tag inv">Invited seminar</span>
-              </div>
-            </li>
-
-            <li class="pub item talk" data-keywords="porous media conference 2016 cincinnati unsaturated flow multilayer swelling pillai">
-              <p class="title">On modeling unsaturated flow through multiple layers of thin, swelling porous media</p>
-              <p class="meta"><strong>A. Kaffel</strong>, K. Pillai — 8th International Conference on Porous Media, Cincinnati, OH, USA, May 9–12, 2016</p>
-              <div class="tags">
-                <span class="tag inv">Conference talk</span>
-                <span class="tag key">Porous media</span>
-              </div>
-            </li>
-
-            <!-- You can keep adding the rest of your APS/SIAM/AMS items here exactly as before
-                 (the filtering/search will still work). -->
-
-          </ul>
-
-          <p class="small" style="margin-top:10px">
-            Tip: “Selected” items are curated to represent strongest venue/visibility signals (top journals + invited talks).
-          </p>
-        </section>
-
-      </main>
-
-      <!-- RIGHT SIDEBAR -->
-      <aside class="card side" aria-label="Profile highlights">
-        <h2>Employer-Focused Highlights</h2>
-
-        <div class="metric">
-          <div class="k">Quick impact snapshot</div>
-          <div class="v">
-            <strong>Peer-reviewed journal papers:</strong> 15+ <br/>
-            <strong>Book chapters:</strong> 3 (incl. forthcoming 2026) <br/>
-            <strong>Invited talks & presentations:</strong> 30+ <br/>
-            <strong>Invited / featured venues:</strong> NASA • Caltech • SIAM • AMS • APS • InterPore
-          </div>
-          <div class="small" style="margin-top:6px">
-            (Update these counts if you want exact totals from your CV/Google Scholar.)
-          </div>
-        </div>
-
-        <div class="metric">
-          <div class="k">Research positioning</div>
-          <div class="v">
-            Rigorous theory + computation + engineering relevance (CFD, porous media, instability, inverse problems),
-            with sustained peer-reviewed publication and invited dissemination.
-          </div>
-        </div>
-
-        <div class="metric">
-          <div class="k">Quick links</div>
-          <div class="v">
-            <div class="links">
-              <a class="linkbtn" href="https://scholar.google.com/citations?hl=en&user=qsyguP4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
-              <a class="linkbtn" href="#featured">Selected</a>
-              <a class="linkbtn" href="#journals">Journals</a>
-              <a class="linkbtn" href="#chapters">Chapters</a>
-              <a class="linkbtn" href="#talks">Talks</a>
-            </div>
-          </div>
-        </div>
-
-        <p class="small" style="margin-top:10px">
-          If you share your current Google Scholar citation metrics (citations / h-index / i10-index),
-          I can format them here in a clean “metrics” card that looks like top R1 faculty pages.
-        </p>
-      </aside>
-    </div>
-
-    <footer>
-      © <span id="year"></span> Dr. Ahmed Kaffel. All rights reserved. <br/>
-      Last updated: <span id="updated"></span>.
-    </footer>
-  </div>
-
-  <script>
-    // Footer dates
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const d = new Date();
-    document.getElementById("updated").textContent = d.toLocaleDateString(undefined, { year:"numeric", month:"short", day:"2-digit" });
-
-    // Filtering + search (client-side)
-    const pills = [...document.querySelectorAll(".pill")];
-    const items = [...document.querySelectorAll(".item")];
-    const q = document.getElementById("q");
-
-    function apply(){
-      const filter = document.querySelector(".pill.active")?.dataset.filter || "all";
-      const query = (q.value || "").trim().toLowerCase();
-
-      items.forEach(el=>{
-        const isType =
-          filter === "all" ? true :
-          el.classList.contains(filter);
-
-        const kw = (el.getAttribute("data-keywords") || "").toLowerCase();
-        const text = el.textContent.toLowerCase();
-        const isQuery = query === "" ? true : (kw.includes(query) || text.includes(query));
-
-        el.style.display = (isType && isQuery) ? "" : "none";
-      });
-    }
-
-    pills.forEach(p=>{
-      p.addEventListener("click", ()=>{
-        pills.forEach(x=>x.classList.remove("active"));
-        p.classList.add("active");
-        apply();
-      });
-    });
-
-    q.addEventListener("input", apply);
-    apply();
-  </script>
+
+<div class="container">
+
+<div class="header">
+
+<h1>Selected Publications & Scientific Presentations</h1>
+
+<div class="subtitle">
+Dr. Ahmed Kaffel — Applied Mathematics • Scientific Computing • CFD • Porous Media • Inverse Problems
+</div>
+
+<div class="selected-badge">
+Selected highlights curated for employers and collaborators
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Selected Featured Contributions</h2>
+
+<div class="pub">
+
+<div class="pub-title">
+Eigenspectra and mode coalescence of temporal instability in two-fluid flows
+</div>
+
+<div class="pub-meta">
+A. Kaffel, A. Riaz — Physics of Fluids, 2015
+</div>
+
+<span class="tag">Selected</span>
+<span class="tag">Multiphase flow</span>
+
+<br>
+
+<a class="btn" href="http://dx.doi.org/10.1063/1.4916404" target="_blank">
+DOI
+</a>
+
+</div>
+
+
+<div class="pub">
+
+<div class="pub-title">
+Rigorous derivation of a new macroscopic model for partially saturated flow in multilayered thin swelling porous media
+</div>
+
+<div class="pub-meta">
+A. Kaffel — International Journal of Heat and Mass Transfer, 2019
+</div>
+
+<span class="tag">Selected</span>
+<span class="tag">Porous media</span>
+
+<br>
+
+<a class="btn" href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058" target="_blank">
+DOI
+</a>
+
+</div>
+
+
+<div class="pub">
+
+<div class="pub-title">
+Wavelet algorithms for high-resolution image reconstruction in magnetic induction tomography
+</div>
+
+<div class="pub-meta">
+Invited Talk — Caltech, 2019
+</div>
+
+<span class="tag">Selected</span>
+<span class="tag">Inverse problems</span>
+
+</div>
+
+
+<div class="pub">
+
+<div class="pub-title">
+Modeling Multiphase Flow in Thin Absorbent Swelling Porous Materials
+</div>
+
+<div class="pub-meta">
+InterPore 2025 — Albuquerque, USA
+</div>
+
+<span class="tag">Selected</span>
+<span class="tag">Conference</span>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+
+© Dr. Ahmed Kaffel — Selected Publications Page
+
+</div>
+
+</div>
+
 </body>
 </html>
