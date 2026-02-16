@@ -1,323 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Teaching, Mentorship, and Academic Leadership | Dr. Ahmed Kaffel</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Dr. Ahmed Kaffel — Applied Mathematician and Computational Scientist. Advanced mathematical models and scalable computational frameworks for engineering, scientific computing, biomedical systems, and emerging technologies." />
+<title>Research | Dr. Ahmed Kaffel</title>
 
 <style>
+  :root{
+    --ink:#0f172a;
+    --muted:#475569;
+    --line:#e5e7eb;
+    --bg:#ffffff;
+    --soft:#f8fafc;
+    --brand:#002855;
+    --accent:#fdb515;
+    --card:#ffffff;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --radius:16px;
+  }
 
-:root{
---brand:#002855;
---accent:#fdb515;
---ink:#0f172a;
---muted:#475569;
---soft:#f8fafc;
---card:#ffffff;
---line:#e2e8f0;
---shadow:0 12px 40px rgba(0,0,0,.08);
---radius:14px;
-}
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    line-height:1.7;
+  }
 
-body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:var(--soft);
-color:var(--ink);
-line-height:1.75;
-}
+  /* NAV */
+  .nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(0,40,85,.98);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:saturate(180%) blur(10px);
+  }
+  .nav .wrap{
+    max-width:1180px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .brand{
+    color:#fff; text-decoration:none;
+    font-weight:800; letter-spacing:.2px;
+    white-space:nowrap;
+    font-size:16px;
+  }
+  .links{display:flex; flex-wrap:wrap; gap:16px; justify-content:flex-end}
+  .links a{
+    color:#fff; text-decoration:none; font-weight:650; font-size:14.5px;
+    opacity:.92;
+  }
+  .links a:hover{color:var(--accent); opacity:1}
 
-.nav{
-background:var(--brand);
-padding:18px;
-}
+  /* HEADER / HERO */
+  .hero{
+    max-width:1180px;
+    margin:auto;
+    padding:52px 18px 24px;
+  }
+  .hero-card{
+    background:radial-gradient(1200px 400px at 15% 10%, rgba(253,181,21,.18), transparent 55%),
+               radial-gradient(900px 380px at 80% 0%, rgba(0,40,85,.14), transparent 50%),
+               #fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:34px;
+  }
+  .kicker{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(248,250,252,.9);
+    font-weight:800;
+    color:var(--brand);
+    font-size:13px;
+    letter-spacing:.2px;
+  }
+  h1{
+    margin:14px 0 10px 0;
+    font-size:38px;
+    line-height:1.15;
+    letter-spacing:-.6px;
+  }
+  .subtitle{
+    margin:0;
+    color:var(--muted);
+    font-size:18px;
+    font-weight:600;
+    max-width:950px;
+  }
+  .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+  .pill{
+    background:var(--soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--ink);
+    font-weight:750;
+    font-size:13.5px;
+  }
 
-.nav .wrap{
-max-width:1150px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+  /* LAYOUT */
+  .container{max-width:1180px; margin:auto; padding:18px 18px 56px}
+  .grid{
+    display:grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap:18px;
+    align-items:start;
+  }
 
-.brand{
-color:white;
-font-weight:700;
-font-size:18px;
-text-decoration:none;
-}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+  }
 
-.links a{
-color:white;
-text-decoration:none;
-margin-left:24px;
-font-weight:600;
-}
+  .section-title{
+    margin:0 0 12px 0;
+    font-size:20px;
+    letter-spacing:-.2px;
+    color:var(--brand);
+  }
 
-.links a:hover{
-color:var(--accent);
-}
+  p{margin:0 0 12px 0; color:var(--muted); font-size:16.5px}
+  .lead{color:var(--ink); font-size:16.8px}
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:50px 20px;
-}
+  /* RIGHT SIDEBAR */
+  .side{
+    position:sticky;
+    top:78px;
+    padding:22px;
+  }
+  .side h3{
+    margin:0 0 10px 0;
+    font-size:16px;
+    color:var(--brand);
+    letter-spacing:-.2px;
+  }
+  .mini{
+    border-top:1px solid var(--line);
+    margin-top:14px;
+    padding-top:14px;
+  }
+  .kv{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    margin:10px 0;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+  .kv strong{color:var(--ink)}
+  .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    font-weight:800;
+    font-size:14px;
+    color:var(--brand);
+    background:#fff;
+  }
+  .btn.primary{
+    background:var(--brand);
+    color:#fff;
+    border-color:rgba(255,255,255,.12);
+  }
+  .btn:hover{border-color:#cbd5e1}
+  .btn.primary:hover{background:#001f41}
 
-.hero{
-background:white;
-padding:40px;
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-}
+  /* FEATURE GRID */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-top:12px;
+  }
+  .feature{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px;
+    background:linear-gradient(180deg, rgba(248,250,252,.9), #fff);
+  }
+  .feature h4{
+    margin:0 0 8px 0;
+    font-size:15.5px;
+    color:var(--ink);
+  }
+  .feature p{margin:0; font-size:14.8px}
 
-.hero h1{
-margin:0;
-font-size:36px;
-}
+  /* LISTS */
+  ul{margin:10px 0 0 18px; color:var(--muted)}
+  li{margin:8px 0}
 
-.hero p{
-margin-top:18px;
-font-size:18px;
-color:var(--muted);
-}
+  /* FOOT */
+  .foot{
+    margin-top:18px;
+    padding:22px 18px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    text-align:center;
+    font-size:14px;
+  }
 
-.section{
-margin-top:35px;
-}
-
-.card{
-background:white;
-padding:35px;
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-}
-
-.card h2{
-color:var(--brand);
-margin-top:0;
-margin-bottom:18px;
-}
-
-.card p{
-margin-bottom:18px;
-font-size:17px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-.footer{
-text-align:center;
-padding:35px;
-color:var(--muted);
-}
-
-@media(max-width:900px){
-.grid{
-grid-template-columns:1fr;
-}
-}
-
+  @media (max-width: 980px){
+    h1{font-size:32px}
+    .grid{grid-template-columns:1fr}
+    .side{position:relative; top:auto}
+    .feature-grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
-<div class="wrap">
-<a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
-<div class="links">
-<a href="index.html">Home</a>
-<a href="research.html">Research</a>
-<a href="publications.html">Publications</a>
-<a href="teaching.html">Teaching</a>
-<a href="contact.html">Contact</a>
-</div>
-</div>
+  <div class="wrap">
+    <a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </div>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <span class="kicker">Research Program • Applied Mathematics • Scientific Computing</span>
+    <h1>Advanced Models and Scalable Computational Frameworks for Complex Systems</h1>
+    <p class="subtitle">
+      My research program develops advanced mathematical models and scalable computational frameworks to address fundamental and applied challenges across engineering,
+      scientific computing, biomedical systems, and emerging technologies. I combine rigorous theory with high-performance computation to deliver predictive,
+      reliable, and efficient tools for real-world scientific and engineering impact.
+    </p>
+
+    <div class="pillrow">
+      <span class="pill">Mathematical Modeling</span>
+      <span class="pill">PDEs & Numerical Analysis</span>
+      <span class="pill">Scientific Computing</span>
+      <span class="pill">High-Order Methods</span>
+      <span class="pill">Multiphysics Simulation</span>
+      <span class="pill">Inverse Problems & Imaging</span>
+      <span class="pill">Porous Media & Transport</span>
+      <span class="pill">CFD & Multiphase Flow</span>
+      <span class="pill">HPC & Parallel Simulation</span>
+      <span class="pill">AI/ML for Scientific Computing</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
 <div class="container">
-
-<div class="hero">
-
-<h1>Teaching, Mentorship, and Academic Leadership</h1>
-
-<p>
-
-Dr. Ahmed Kaffel brings over fifteen years of distinguished university-level teaching experience across major research universities in the United States and internationally, including the University of Wisconsin–Milwaukee, Marquette University, Prince Sultan University, and Virginia Tech. Following his doctoral training and subsequent research appointments as a Research Associate Scientist at Brown University and the University of Maryland, he developed extensive teaching experience across diverse academic environments, serving undergraduate and graduate student populations and contributing to the advancement of rigorous and modern mathematics, computational science, and engineering curricula.
-
-</p>
-
-<p>
-
-He has taught extensively across foundational and advanced areas central to applied mathematics, computational science, and engineering education. His instructional work supports students pursuing careers in mathematics, engineering, computational science, biomedical engineering, mechanical engineering, civil engineering, aerospace engineering, chemical engineering, and interdisciplinary scientific fields.
-
-</p>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Teaching Philosophy and Instructional Approach</h2>
-
-<p>
-
-Dr. Kaffel’s teaching philosophy is grounded in intellectual rigor, interdisciplinary integration, and research-informed instruction. His teaching emphasizes conceptual clarity, analytical depth, and computational thinking, enabling students to develop strong mathematical foundations while applying modern computational methods to complex scientific and engineering challenges.
-
-</p>
-
-<p>
-
-He integrates advanced scientific computing tools—including MATLAB, Python, and high-performance computational frameworks—into his teaching, providing students with practical computational skills essential for modern engineering, scientific computing, biomedical modeling, and industrial applications. His courses connect mathematical theory with real-world applications in fluid mechanics, computational engineering, biomedical simulation, inverse problems, multiscale modeling, and data-driven scientific computing.
-
-</p>
-
-<p>
-
-Through rigorous instruction, interdisciplinary integration, and active mentorship, Dr. Kaffel prepares students for advanced graduate study, research careers, and leadership roles across academia, industry, national laboratories, and engineering sectors.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Teaching Expertise and Instructional Scope</h2>
-
-<p>
-
-Dr. Kaffel has taught and developed courses across a broad range of core and advanced areas essential to applied mathematics, computational science, and engineering education, including differential equations, linear algebra, numerical analysis, mathematical modeling, scientific computing, and computational engineering.
-
-</p>
-
-<p>
-
-His teaching integrates advanced computational and numerical methods used across engineering and scientific disciplines, including finite element methods (FEM), finite volume methods (FVM), spectral methods, discontinuous Galerkin methods, ENO/WENO methods, and high-performance parallel computing techniques. These methods are fundamental to computational fluid dynamics, structural mechanics, biomedical simulation, industrial modeling, and multiphysics engineering systems.
-
-</p>
-
-<p>
-
-His instructional expertise supports students pursuing careers in mechanical engineering, aerospace engineering, civil engineering, biomedical engineering, chemical engineering, computational engineering, and applied scientific research.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Educational Leadership, Mentorship, and Curriculum Development</h2>
-
-<p>
-
-Dr. Kaffel has played a significant leadership role in curriculum delivery, multi-section course coordination, and instructional innovation. He has contributed to the development of modern curricula integrating mathematical rigor, computational methods, and engineering applications. His teaching leadership reflects sustained excellence in curriculum delivery, instructional innovation, and academic mentorship.
-
-</p>
-
-<p>
-
-He has mentored undergraduate and graduate students in research areas including multiscale modeling, computational fluid dynamics, inverse problems, biomedical simulation, porous media transport, and high-performance scientific computing. Through this mentorship, he has guided students toward graduate programs, engineering careers, and research positions across academia and industry.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Research-Integrated Teaching and Grant Participation</h2>
-
-<p>
-
-Dr. Kaffel actively integrates research into his teaching, exposing students to modern computational and mathematical methods used in scientific and engineering research. He has participated in research mentorship and proposal preparation supporting undergraduate research participation, including engagement with programs such as the Summer Undergraduate Research Fellowship (SURF), supporting student involvement in scientific research and computational modeling projects.
-
-</p>
-
-<p>
-
-His teaching reflects strong integration of applied mathematics, engineering simulation, biomedical modeling, and computational science, preparing students to contribute to emerging technological fields and interdisciplinary scientific research.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Academic Service and Professional Contributions</h2>
-
-<p>
-
-Dr. Kaffel has contributed actively to academic service and institutional leadership, including serving as an elected member of academic award committees and participating in academic governance and faculty service activities. His service reflects a strong commitment to academic excellence, institutional development, and the advancement of higher education.
-
-</p>
-
-<p>
-
-He has also contributed to scholarly research through peer-reviewed publications and collaborative research activities, further strengthening the integration of research and teaching throughout his academic career.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<div class="card">
-
-<h2>Commitment to Excellence in Education and Student Success</h2>
-
-<p>
-
-Dr. Kaffel is deeply committed to providing rigorous, inclusive, and research-informed education that prepares students for leadership roles in science, engineering, and technological innovation. His teaching empowers students to develop analytical thinking, computational expertise, and scientific problem-solving skills essential for success in modern engineering and scientific careers.
-
-</p>
-
-<p>
-
-His extensive teaching experience across leading research universities, combined with his expertise in applied mathematics, scientific computing, and engineering simulation, positions him as a highly effective educator capable of contributing to top-tier academic programs in mathematics, engineering, and computational science.
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-<div class="footer">
-
-© Dr. Ahmed Kaffel | Applied Mathematics • Scientific Computing • Engineering and Computational Science Education
-
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <div class="card">
+        <h2 class="section-title">Research Overview</h2>
+        <p class="lead">
+          My work sits at the interface of applied mathematics, computational science, and engineering, with a focus on designing rigorous mathematical formulations,
+          high-order numerical methods, and efficient computational solvers for complex multiphysics systems governed by nonlinear partial differential equations.
+          By integrating stability analysis, multiscale modeling, inverse methods, and data-driven computation, I translate mathematical theory into robust tools
+          that enable predictive simulation, optimization, and engineering innovation.
+        </p>
+        <p>
+          A defining objective of my research is to develop generalizable algorithms and software frameworks that remain valid across a wide range of application domains.
+          As a result, my studies naturally support and connect to challenges in <strong>mechanical engineering</strong>, <strong>aerospace engineering</strong>,
+          <strong>biomedical engineering</strong>, <strong>civil engineering</strong>, <strong>energy and industrial engineering</strong>,
+          <strong>materials engineering</strong>, <strong>computational engineering</strong>, as well as <strong>medicine</strong> and <strong>biology</strong>.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Core Research Thrusts</h2>
+
+        <div class="feature-grid">
+          <div class="feature">
+            <h4>1) Multiphysics Modeling and High-Performance Simulation</h4>
+            <p>
+              Scalable PDE models and high-fidelity simulation frameworks for multiscale, nonlinear systems in fluids, transport, deformation, and coupled processes.
+            </p>
+          </div>
+          <div class="feature">
+            <h4>2) Fluid Dynamics, Multiphase Flow, and Hydrodynamic Stability</h4>
+            <p>
+              Stability theory, turbulence modeling, and computational analysis for Newtonian and complex fluids, microchannel flows, interfacial instabilities, and free-surface systems.
+            </p>
+          </div>
+          <div class="feature">
+            <h4>3) Porous Media Transport and Volume-Averaged Upscaling</h4>
+            <p>
+              Multiscale transport models for unsaturated and multiphase flow in thin swelling porous structures, with applications from industrial materials to energy systems.
+            </p>
+          </div>
+          <div class="feature">
+            <h4>4) Inverse Problems, Imaging, and Data-Driven Computing</h4>
+            <p>
+              Regularized inversion and wavelet-based reconstruction algorithms for imaging and parameter estimation, with extensions to ML-accelerated inverse modeling.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top:14px">
+          Methodologically, my research emphasizes robust computational solvers and analysis tools, including <strong>finite element methods</strong>,
+          <strong>discontinuous Galerkin methods</strong>, <strong>finite volume methods</strong>, <strong>spectral methods</strong>,
+          <strong>ENO/WENO high-order schemes</strong>, <strong>boundary element methods</strong>, and <strong>ALE moving-mesh methods</strong>.
+          I also develop efficient numerical solvers for complex differential systems and favor analytical solutions to simplified problems whenever possible to
+          guide computation and strengthen physical interpretation.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Selected Research Directions and Impact</h2>
+
+        <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:17px;">Inverse Problems and Medical Imaging: Wavelet-Based MIT Reconstruction</h3>
+        <p>
+          I am developing wavelet-based algorithms for high-resolution image reconstruction in magnetic induction tomography (MIT), a noninvasive and noncontact approach
+          for electrical conductivity imaging. Because conductivity differs with disease, MIT holds promise for accessible diagnostic imaging. My work focuses on single-coil MIT
+          image reconstruction, including mesh-free methods that reduce reliance on precisely known target boundaries. The approach discretizes the convolution integral using
+          wavelets to automatically place spatial resolution where needed, and employs regularized least squares and advanced linear algebra (including SVD) to stabilize
+          underdetermined reconstructions. The long-term goal is an efficient meshless algorithm that could be implemented on a portable device (e.g., tablet-class hardware),
+          enabling low-cost imaging—particularly in remote and underserved communities—while also supporting industrial imaging and computational electromagnetics.
+        </p>
+        <p>
+          This direction benefits interdisciplinary research communities in computer science, engineering, mathematics, and medical physics, and supports industrial development in
+          imaging, medical devices, computational electromagnetics, GPU-accelerated linear algebra, and uncertainty quantification through error estimation.
+        </p>
+
+        <hr style="border:none; border-top:1px solid var(--line); margin:16px 0">
+
+        <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:17px;">Thin Swelling Porous Media and Multilayer Unsaturated Transport</h3>
+        <p>
+          Porous media are ubiquitous across nature and engineering, from groundwater flow and oil recovery to diffusion in biological tissue scaffolds and industrial curing.
+          A major focus of my work is modeling unsaturated flow through multiple layers of thin, swelling porous media—a multiscale problem in which pore-scale physics influences
+          macroscale behavior. Using rigorous multiscale modeling and numerical analysis, I develop transport models that capture deformation, storage, and inter-layer exchange,
+          enabling predictive simulations for filtration, energy systems, medical devices, and absorbent materials (e.g., wipes, paper towels, feminine pads, and diapers).
+        </p>
+
+        <hr style="border:none; border-top:1px solid var(--line); margin:16px 0">
+
+        <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:17px;">Industrial Collaboration: Kimberly-Clark Modeling of Thin Absorbent Porous Structures</h3>
+        <p>
+          In collaboration with Kimberly-Clark, I contributed to modeling wicking and partially saturated flow in multilayer thin swelling porous media.
+          I am among the few researchers applying the <strong>volume-averaging technique</strong>—a rigorous upscaling approach—to develop efficient macroscopic models
+          for these systems. The resulting model supports fast, accurate, and cost-effective simulation workflows and is used to help predict and understand fluid flow and
+          deformation processes in thin porous media relevant to product design (including diaper performance). This work accelerates product development by reducing experimental
+          iteration time and providing physically grounded predictive capability.
+        </p>
+        <p>
+          Using similar volume-averaging ideas, I also developed macroscopic modeling approaches relevant to water management in polymer electrolyte membrane fuel cells (PEMFCs),
+          where transport in porous layers is a key limitation for high performance. More broadly, this framework extends naturally to porous-media problems across geology,
+          chemical reactors, drying and liquid composite molding, combustion, and biomedical systems such as tissue scaffolds, brain tissue transport, macromolecule transport,
+          and thermal simulations in biological tissues.
+        </p>
+
+        <hr style="border:none; border-top:1px solid var(--line); margin:16px 0">
+
+        <h3 style="margin:0 0 8px 0; color:var(--ink); font-size:17px;">Fluid Mechanics: Stability, Turbulence, Free-Surface Flow, and Engineering Applications</h3>
+        <p>
+          My Ph.D. work at Virginia Tech centered on the stability of parallel shear flows—one of the foundational problems in fluid mechanics—with emphasis on viscoelastic
+          flows and transition mechanisms. Subsequently, my research at the University of Maryland focused on hydrodynamic stability of multiphase flows, including perturbation
+          analysis of interfacial instability and high-order numerical methods for quantifying nonlinear evolution of unstable structures in microchannel configurations.
+          I also contributed to studies in free-surface turbulent flows using anisotropic algebraic Reynolds stress modeling to predict the hydrodynamic response of open channels
+          with heterogeneous bed roughness, including improved closure models for wall friction and momentum dispersion.
+        </p>
+        <p>
+          Beyond stability, my work includes computational engineering projects such as numerical simulation and control of unmanned underwater vehicles (UUVs),
+          addressing applications including seabed exploration, pollutant tracking, offshore industry support, and underwater inspection.
+        </p>
+
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Methods, Computation, and Generalizable Tool-Building</h2>
+        <p>
+          I develop efficient numerical solvers for complex systems of differential equations using high-order computational methods and scientific computing practices.
+          My work spans inverse problems, data science and visualization, machine learning, computational biology (including cardiovascular modeling), multiphase flow in porous media,
+          and nonlinear dynamics in PDEs/ODEs (including chaos, optimal control, and dynamical systems). Recent efforts expand toward inverse problems and machine learning for biomedical
+          applications, while maintaining broad relevance across engineering and scientific computing.
+        </p>
+        <ul>
+          <li><strong>Numerical PDE methods:</strong> FEM, DG, FVM, spectral methods, ENO/WENO, BEM, ALE</li>
+          <li><strong>Scientific computing:</strong> scalable solvers, high-performance simulation, parallel computing</li>
+          <li><strong>Mathematical analysis:</strong> stability theory, perturbation methods, asymptotics, spectral analysis</li>
+          <li><strong>Data-driven methods:</strong> inverse modeling, regularization, ML/AI for scientific computing</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Funding and Collaboration Vision</h2>
+        <p>
+          I am actively developing competitive research proposals and expanding interdisciplinary collaborations to build a sustainable, externally funded research program.
+          Current and planned proposals target major federal agencies and industry partnerships, including:
+        </p>
+        <ul>
+          <li>National Science Foundation (NSF)</li>
+          <li>Department of Energy (DOE)</li>
+          <li>National Institutes of Health (NIH)</li>
+          <li>Department of Defense (DoD)</li>
+          <li>Industry partnerships</li>
+        </ul>
+        <p>
+          These efforts focus on advancing mathematical modeling, scientific computing, multiscale simulation, inverse problems and imaging, and AI/ML-enhanced computational methods,
+          with broad applicability across engineering fields, medicine, and biological systems.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="card side">
+      <h3>Research Strengths</h3>
+      <div class="kv"><strong>Core:</strong> Mathematical modeling • PDEs • Numerical methods • Scientific computing</div>
+      <div class="kv"><strong>Methods:</strong> FEM • DG • FVM • Spectral • ENO/WENO • BEM • ALE</div>
+      <div class="kv"><strong>Focus:</strong> Multiphysics simulation • Stability • Transport • Inverse modeling</div>
+      <div class="kv"><strong>Scale:</strong> High-performance and parallel simulation</div>
+
+      <div class="mini">
+        <h3>Application Breadth</h3>
+        <div class="kv">Mechanical engineering</div>
+        <div class="kv">Aerospace engineering</div>
+        <div class="kv">Biomedical engineering</div>
+        <div class="kv">Civil engineering</div>
+        <div class="kv">Energy & industrial engineering</div>
+        <div class="kv">Materials engineering</div>
+        <div class="kv">Computational engineering</div>
+        <div class="kv">Medicine & biology</div>
+      </div>
+
+      <div class="mini">
+        <h3>Documents</h3>
+        <div class="btns">
+          <a class="btn primary" href="res26.pdf">Research Statement (PDF)</a>
+          <a class="btn" href="CV25F.pdf">CV (PDF)</a>
+          <a class="btn" href="publications.html">Publications</a>
+        </div>
+      </div>
+
+      <div class="mini">
+        <h3>Collaboration</h3>
+        <p style="margin:0; font-size:14.8px;">
+          I welcome collaborations with universities, national laboratories, and industry partners in modeling, simulation, inverse methods,
+          and computational engineering.
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="foot">
+    © Dr. Ahmed Kaffel — Research in Applied Mathematics • Scientific Computing • Engineering & Biomedical Systems
+  </div>
 </div>
 
 </body>
