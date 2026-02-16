@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Teaching | Dr. Ahmed Kaffel — university-level teaching, mentorship, course leadership, and educational service across UWM, Marquette, Prince Sultan University, and Virginia Tech." />
+<title>Teaching | Dr. Ahmed Kaffel</title>
+
+<style>
+  :root{
+    --ink:#0f172a;
+    --muted:#475569;
+    --line:#e5e7eb;
+    --bg:#ffffff;
+    --soft:#f8fafc;
+    --brand:#002855;
+    --accent:#fdb515;
+    --card:#ffffff;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --radius:16px;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    line-height:1.7;
+  }
+
+  /* NAV */
+  .nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(0,40,85,.98);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:saturate(180%) blur(10px);
+  }
+  .nav .wrap{
+    max-width:1180px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .brand{
+    color:#fff; text-decoration:none;
+    font-weight:800; letter-spacing:.2px;
+    white-space:nowrap;
+    font-size:16px;
+  }
+  .links{display:flex; flex-wrap:wrap; gap:16px; justify-content:flex-end}
+  .links a{
+    color:#fff; text-decoration:none; font-weight:650; font-size:14.5px;
+    opacity:.92;
+  }
+  .links a:hover{color:var(--accent); opacity:1}
+
+  /* HERO */
+  .hero{
+    max-width:1180px;
+    margin:auto;
+    padding:52px 18px 20px;
+  }
+  .hero-card{
+    background:radial-gradient(1200px 420px at 15% 10%, rgba(253,181,21,.18), transparent 55%),
+               radial-gradient(900px 380px at 80% 0%, rgba(0,40,85,.14), transparent 50%),
+               #fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:34px;
+  }
+  .kicker{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(248,250,252,.9);
+    font-weight:800;
+    color:var(--brand);
+    font-size:13px;
+    letter-spacing:.2px;
+  }
+  h1{
+    margin:14px 0 10px 0;
+    font-size:38px;
+    line-height:1.15;
+    letter-spacing:-.6px;
+  }
+  .subtitle{
+    margin:0;
+    color:var(--muted);
+    font-size:18px;
+    font-weight:600;
+    max-width:980px;
+  }
+  .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+  .pill{
+    background:var(--soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--ink);
+    font-weight:750;
+    font-size:13.5px;
+  }
+
+  /* LAYOUT */
+  .container{max-width:1180px; margin:auto; padding:18px 18px 56px}
+  .grid{
+    display:grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+  }
+
+  .section-title{
+    margin:0 0 12px 0;
+    font-size:20px;
+    letter-spacing:-.2px;
+    color:var(--brand);
+  }
+
+  p{margin:0 0 12px 0; color:var(--muted); font-size:16.5px}
+  .lead{color:var(--ink); font-size:16.8px}
+
+  /* Right sidebar */
+  .side{
+    position:sticky;
+    top:78px;
+    padding:22px;
+  }
+  .side h3{
+    margin:0 0 10px 0;
+    font-size:16px;
+    color:var(--brand);
+    letter-spacing:-.2px;
+  }
+  .mini{
+    border-top:1px solid var(--line);
+    margin-top:14px;
+    padding-top:14px;
+  }
+  .kv{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    margin:10px 0;
+    color:var(--muted);
+    font-size:14.6px;
+  }
+  .kv strong{color:var(--ink)}
+  .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    font-weight:800;
+    font-size:14px;
+    color:var(--brand);
+    background:#fff;
+  }
+  .btn.primary{
+    background:var(--brand);
+    color:#fff;
+    border-color:rgba(255,255,255,.12);
+  }
+  .btn:hover{border-color:#cbd5e1}
+  .btn.primary:hover{background:#001f41}
+
+  /* DETAILS / ACCORDIONS */
+  details{
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:linear-gradient(180deg, rgba(248,250,252,.9), #fff);
+    padding:14px 14px;
+    margin:10px 0;
+  }
+  summary{
+    cursor:pointer;
+    list-style:none;
+    font-weight:850;
+    color:var(--ink);
+    font-size:15.5px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  summary::-webkit-details-marker{display:none}
+  .tag{
+    font-weight:800;
+    font-size:12.5px;
+    color:var(--brand);
+    border:1px solid var(--line);
+    background:rgba(255,255,255,.9);
+    padding:6px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .course-list{
+    margin:10px 0 0 18px;
+    color:var(--muted);
+  }
+  .course-list li{margin:6px 0}
+
+  /* Footer */
+  .foot{
+    margin-top:18px;
+    padding:22px 18px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    text-align:center;
+    font-size:14px;
+  }
+
+  @media (max-width: 980px){
+    h1{font-size:32px}
+    .grid{grid-template-columns:1fr}
+    .side{position:relative; top:auto}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <span class="kicker">Teaching • Mentorship • Educational Leadership</span>
+    <h1>Teaching and Educational Leadership</h1>
+    <p class="subtitle">
+      I bring over fifteen years of distinguished university-level teaching experience across leading research institutions in the United States and internationally,
+      including the University of Wisconsin–Milwaukee, Marquette University, Prince Sultan University, and Virginia Tech. My instruction integrates rigorous mathematical
+      foundations with modern computational tools and real-world applications—preparing students for advanced study and careers in mathematics, engineering, scientific computing,
+      data science, and interdisciplinary research.
+    </p>
+
+    <div class="pillrow">
+      <span class="pill">Conceptual Clarity</span>
+      <span class="pill">Analytical Rigor</span>
+      <span class="pill">Application-Driven Learning</span>
+      <span class="pill">Modern Computational Tools</span>
+      <span class="pill">Mentorship & Inclusive Excellence</span>
+      <span class="pill">Multi-Section Leadership</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="container">
+  <div class="grid">
+
+    <!-- LEFT -->
+    <main>
+
+      <div class="card">
+        <h2 class="section-title">Teaching Philosophy</h2>
+        <p class="lead">
+          My teaching is grounded in clarity, rigor, and relevance. I aim to build strong mathematical foundations while helping students develop
+          the habits of mind required for modern problem-solving: precise reasoning, computational proficiency, and the ability to translate real-world
+          questions into quantitative models.
+        </p>
+        <p>
+          Across diverse institutions and student populations, I have consistently integrated mathematical theory with computational practice—using modern tools
+          to reinforce core concepts and to connect mathematics to applications in engineering, scientific computing, biomedical modeling, physics, and data-driven research.
+          My instructional approach emphasizes active learning, structured scaffolding, frequent feedback, and high expectations in a supportive environment that enables
+          students from all backgrounds to succeed.
+        </p>
+        <p>
+          I have taught and coordinated a broad range of undergraduate and graduate courses and have mentored hundreds of students. I take particular pride in guiding students
+          toward confidence and independence—helping them progress from foundational mastery to advanced analytical and computational thinking.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Educational Leadership, Mentorship, and Service</h2>
+        <ul class="course-list">
+          <li><strong>Instructional leadership:</strong> multi-section coordination and consistent, high-quality delivery across multiple course formats.</li>
+          <li><strong>Mentorship:</strong> individualized academic mentoring, research guidance, and career preparation for students entering graduate programs and technical fields.</li>
+          <li><strong>Service:</strong> participation in departmental and university service, including elected committee roles (e.g., academic staff awards committee participation).</li>
+          <li><strong>Undergraduate research development:</strong> active participation in competitive student research initiatives, including preparation and submission of proposals supporting undergraduate research participation through programs such as <strong>SURF</strong>.</li>
+          <li><strong>Scholarly engagement:</strong> participation in workshops and professional development activities; continued publication of peer-reviewed work and scholarly contributions (including papers and book chapters).</li>
+        </ul>
+        <p style="margin-top:12px">
+          This combination of teaching excellence, mentorship, and service reflects a sustained commitment to academic excellence and inclusive education,
+          and demonstrates full readiness to support rigorous and modern mathematics curricula central to applied mathematics, computational science, and engineering education.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">Complete Teaching Record</h2>
+        <p>
+          The list below includes <strong>all courses</strong> I have taught, organized by institution and term for transparency and accurate public evaluation.
+        </p>
+
+        <!-- UWM -->
+        <details open>
+          <summary>
+            University of Wisconsin–Milwaukee (UWM)
+            <span class="tag">2022–Present</span>
+          </summary>
+
+          <details>
+            <summary>Spring 2026 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 98/108</li>
+              <li>Math 240: LINEAR ALGEBRA- MATRICES AND APPLICATIONS</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2025 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 240 (sections 006, 003 and 004): LINEAR ALGEBRA- MATRICES AND APPLICATIONS</li>
+              <li>Math 211-section 291 : Survey in Calculus and Analytic Geometry</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2025 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 240 (sections 006, 003 and 004): LINEAR ALGEBRA- MATRICES AND APPLICATIONS</li>
+              <li>Math 211-section 291 : Survey in Calculus and Analytic Geometry</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2024 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 211 : Survey in Calculus and Analytic Geometry</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2024 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 234 : Linear Algebra and Differential Equations–</li>
+              <li>Math 211 : Survey in Calculus and Analytic Geometry</li>
+              <li>Math 208 : Quantitative Models for Business</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2023 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 208 (section 203): Quantitative Models for Business</li>
+              <li>Math 211 (Sections 291-292) : Survey in Calculus and Analytic Geometry</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2023 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 240 (sections 001 and 002): LINEAR ALGEBRA- MATRICES AND APPLICATIONS</li>
+              <li>Math 211 : Survey in Calculus and Analytic Geometry</li>
+              <li>Math 211 Slides and practice problems</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2022 <span class="tag">UWM</span></summary>
+            <ul class="course-list">
+              <li>Math 240 (sections 001, 002 and 203): LINEAR ALGEBRA- MATRICES AND APPLICATIONS</li>
+              <li>Math 232 (section 008): CALCULUS & ANALYTIC GEOMETRY II</li>
+            </ul>
+          </details>
+
+        </details>
+
+        <!-- Marquette -->
+        <details>
+          <summary>
+            Marquette University
+            <span class="tag">2017–2021</span>
+          </summary>
+
+          <details>
+            <summary>Spring 2021 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 5510/Math4510: Partial Differential Equations</li>
+              <li>Math 3100 (section 101): Linear Algebra and Matrix Theory</li>
+              <li>Math 1410 (section 101): Calculus for Biological Sciences</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2020 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 1451 (section 101): Calculus for Biological Sciences</li>
+              <li>Math 1451 (sections: 101 and 102): Calculus 2</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Summer 2020 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 1450 (section 101): Calculus I</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2020 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 3100</li>
+              <li>Math 1450</li>
+              <li>Math 1451</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2019 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 1400</li>
+              <li>Math 1410</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Summer 2019 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 1451</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2019 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 3100</li>
+              <li>Math 1400</li>
+              <li>Math 1410</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2018 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 1400</li>
+              <li>Math 1410</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2018 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 2451</li>
+              <li>Math 1400</li>
+              <li>Math 1410</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2017 <span class="tag">Marquette</span></summary>
+            <ul class="course-list">
+              <li>Math 2451</li>
+              <li>Math 1455</li>
+            </ul>
+          </details>
+
+        </details>
+
+        <!-- PSU -->
+        <details>
+          <summary>
+            Prince Sultan University (PSU)
+            <span class="tag">2014–2015</span>
+          </summary>
+
+          <details>
+            <summary>Fall 2015 <span class="tag">PSU</span></summary>
+            <ul class="course-list">
+              <li>Math 221</li>
+              <li>Math 002</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2015 <span class="tag">PSU</span></summary>
+            <ul class="course-list">
+              <li>Math 221</li>
+              <li>Math 101</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2014 <span class="tag">PSU</span></summary>
+            <ul class="course-list">
+              <li>Math 001</li>
+              <li>Math 002</li>
+            </ul>
+          </details>
+
+        </details>
+
+        <!-- Virginia Tech -->
+        <details>
+          <summary>
+            Virginia Tech (Graduate Teaching Assistant)
+            <span class="tag">2008–2011</span>
+          </summary>
+
+          <details>
+            <summary>Spring 2011 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1225</li>
+              <li>Math 1226</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2010 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1224</li>
+              <li>Math 1225</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Summer 2010 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1224</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2010 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1225</li>
+              <li>Math 1226</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2009 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1205</li>
+              <li>Math 1206</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2009 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1225</li>
+              <li>Math 1226</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Fall 2008 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1206</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Spring 2008 <span class="tag">Virginia Tech</span></summary>
+            <ul class="course-list">
+              <li>Math 1225</li>
+            </ul>
+          </details>
+
+        </details>
+
+      </div>
+
+    </main>
+
+    <!-- RIGHT -->
+    <aside class="card side">
+      <h3>Hiring Signals</h3>
+      <div class="kv"><strong>Experience:</strong> 15+ years university teaching</div>
+      <div class="kv"><strong>Institutions:</strong> UWM • Marquette • PSU • Virginia Tech</div>
+      <div class="kv"><strong>Levels:</strong> Undergraduate + Graduate (including PDE)</div>
+      <div class="kv"><strong>Strength:</strong> Core + advanced curriculum readiness</div>
+
+      <div class="mini">
+        <h3>Teaching Approach</h3>
+        <div class="kv">Conceptual clarity and rigor</div>
+        <div class="kv">Application-driven learning</div>
+        <div class="kv">Modern computation integration</div>
+        <div class="kv">Mentorship and inclusive excellence</div>
+      </div>
+
+      <div class="mini">
+        <h3>Documents</h3>
+        <div class="btns">
+          <a class="btn primary" href="teach25.pdf">Teaching Statement (PDF)</a>
+          <a class="btn" href="CV25F.pdf">CV (PDF)</a>
+          <a class="btn" href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="mini">
+        <h3>Public Service and Scholarship</h3>
+        <p style="margin:0; font-size:14.8px; color:var(--muted)">
+          Service, mentoring, workshop participation, scholarly publishing, and student research development (including SURF proposal participation)
+          strengthen my teaching through research-informed, student-centered instruction.
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="foot">
+    © Dr. Ahmed Kaffel — Teaching • Mentorship • Educational Leadership
+  </div>
+</div>
+
+</body>
+</html>
