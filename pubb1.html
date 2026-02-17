@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Complete list of peer-reviewed publications, book chapters, invited talks, posters, and professional engagement by Dr. Ahmed Kaffel." />
+<meta name="author" content="Dr. Ahmed Kaffel" />
+
+<title>Publications | Dr. Ahmed Kaffel</title>
+
+<!-- Structured data for SEO -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Ahmed Kaffel",
+  "jobTitle":"Teaching Faculty III",
+  "affiliation":{"@type":"Organization","name":"University of Wisconsin–Milwaukee"},
+  "url":"https://akaffel.com",
+  "sameAs":[
+    "https://scholar.google.com/citations?user=qsyguP4AAAAJ"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#0f172a;
+    --muted:#475569;
+    --line:#e5e7eb;
+    --bg:#ffffff;
+    --soft:#f8fafc;
+    --brand:#002855;
+    --accent:#fdb515;
+    --card:#ffffff;
+    --shadow: 0 10px 30px rgba(15,23,42,.08);
+    --radius:16px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    line-height:1.7;
+  }
+
+  /* NAV (same system as Research page) */
+  .nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(0,40,85,.98);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    backdrop-filter:saturate(180%) blur(10px);
+  }
+  .nav .wrap{
+    max-width:1180px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .brand{
+    color:#fff; text-decoration:none;
+    font-weight:800; letter-spacing:.2px;
+    white-space:nowrap;
+    font-size:16px;
+  }
+  .links{display:flex; flex-wrap:wrap; gap:16px; justify-content:flex-end}
+  .links a{
+    color:#fff; text-decoration:none; font-weight:650; font-size:14.5px;
+    opacity:.92;
+  }
+  .links a:hover{color:var(--accent); opacity:1}
+  .links a.active{color:var(--accent); opacity:1}
+
+  /* HERO */
+  .hero{
+    max-width:1180px;
+    margin:auto;
+    padding:52px 18px 24px;
+  }
+  .hero-card{
+    background:radial-gradient(1200px 400px at 15% 10%, rgba(253,181,21,.18), transparent 55%),
+               radial-gradient(900px 380px at 80% 0%, rgba(0,40,85,.14), transparent 50%),
+               #fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:34px;
+  }
+  .kicker{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:rgba(248,250,252,.9);
+    font-weight:800;
+    color:var(--brand);
+    font-size:13px;
+    letter-spacing:.2px;
+  }
+  h1{
+    margin:14px 0 10px 0;
+    font-size:38px;
+    line-height:1.15;
+    letter-spacing:-.6px;
+  }
+  .subtitle{
+    margin:0;
+    color:var(--muted);
+    font-size:18px;
+    font-weight:600;
+    max-width:980px;
+  }
+
+  /* TOOLBAR */
+  .toolbar{
+    margin-top:18px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .search{
+    flex:1 1 340px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 12px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  .search input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .chiprow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    background:var(--soft);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 12px;
+    color:var(--ink);
+    font-weight:750;
+    font-size:13.5px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .chip.active{
+    border-color:rgba(0,40,85,.35);
+    background:rgba(0,40,85,.06);
+    color:var(--brand);
+  }
+
+  /* LAYOUT */
+  .container{max-width:1180px; margin:auto; padding:18px 18px 56px}
+  .grid{
+    display:grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+  }
+
+  .section-title{
+    margin:0 0 12px 0;
+    font-size:20px;
+    letter-spacing:-.2px;
+    color:var(--brand);
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    align-items:baseline;
+  }
+  .section-title small{
+    color:var(--muted);
+    font-weight:700;
+    font-size:13.5px;
+  }
+
+  /* Expandable sections */
+  details{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:12px 14px;
+    background:linear-gradient(180deg, rgba(248,250,252,.9), #fff);
+    margin-top:12px;
+  }
+  summary{
+    cursor:pointer;
+    font-weight:850;
+    color:var(--ink);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  summary::-webkit-details-marker{display:none}
+  .summary-right{
+    display:flex; gap:10px; align-items:center; color:var(--muted); font-weight:800; font-size:13px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    padding:4px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--soft);
+    color:var(--brand);
+    font-weight:850;
+    font-size:12.5px;
+  }
+
+  /* Publication items */
+  .pub{
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .pub:first-child{border-top:none}
+  .ptitle{
+    margin:0 0 6px 0;
+    font-weight:850;
+    color:var(--ink);
+  }
+  .pmeta{
+    margin:0;
+    color:var(--muted);
+    font-size:15px;
+  }
+  .pmeta strong{color:var(--ink)}
+  .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+  .tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:var(--soft);
+    font-size:12.5px;
+    font-weight:800;
+    color:var(--ink);
+  }
+  .tag.key{border-color:rgba(0,40,85,.20); background:rgba(0,40,85,.05); color:var(--brand)}
+  .tag.gold{border-color:rgba(253,181,21,.35); background:rgba(253,181,21,.14); color:#7a4e00}
+  .tag.gray{color:var(--muted)}
+
+  .actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:10px 12px;
+    border-radius:12px;
+    border:1px solid var(--line);
+    text-decoration:none;
+    font-weight:850;
+    font-size:14px;
+    color:var(--brand);
+    background:#fff;
+    cursor:pointer;
+  }
+  .btn.primary{
+    background:var(--brand);
+    color:#fff;
+    border-color:rgba(255,255,255,.12);
+  }
+  .btn:hover{border-color:#cbd5e1}
+  .btn.primary:hover{background:#001f41}
+
+  /* Sidebar */
+  .side{
+    position:sticky;
+    top:78px;
+    padding:22px;
+  }
+  .side h3{
+    margin:0 0 10px 0;
+    font-size:16px;
+    color:var(--brand);
+    letter-spacing:-.2px;
+  }
+  .mini{
+    border-top:1px solid var(--line);
+    margin-top:14px;
+    padding-top:14px;
+  }
+  .kv{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    margin:10px 0;
+    color:var(--muted);
+    font-size:14.5px;
+  }
+  .kv strong{color:var(--ink)}
+  .stat{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:10px 12px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:linear-gradient(180deg, rgba(248,250,252,.9), #fff);
+    margin-top:10px;
+    font-weight:850;
+  }
+  .stat span{color:var(--muted); font-weight:850}
+  .stat b{color:var(--brand)}
+
+  /* Footer */
+  .foot{
+    margin-top:18px;
+    padding:22px 18px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    text-align:center;
+    font-size:14px;
+  }
+
+  /* Hide helper for filtering */
+  .hidden{display:none !important;}
+
+  @media (max-width: 980px){
+    h1{font-size:32px}
+    .grid{grid-template-columns:1fr}
+    .side{position:relative; top:auto}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Dr. Ahmed Kaffel</a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a class="active" href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-card">
+    <span class="kicker">Publications • Chapters • Invited Talks • Posters • Professional Engagement</span>
+    <h1>Publications & Scientific Contributions</h1>
+    <p class="subtitle">
+      A complete record of peer-reviewed journal articles, book chapters, invited seminars, conference talks and posters,
+      spanning applied mathematics, scientific computing, fluid dynamics, porous media transport, and inverse problems.
+    </p>
+
+    <div class="toolbar" role="region" aria-label="Search and filters">
+      <div class="search" aria-label="Search">
+        <span aria-hidden="true">🔎</span>
+        <input id="q" type="text" placeholder="Search title, authors, venue, keyword… (e.g., IJHMT, InterPore, wavelet, Renardy, NASA, SIAM)" />
+      </div>
+
+      <div class="chiprow" aria-label="Category filters">
+        <span class="chip active" data-filter="all">All</span>
+        <span class="chip" data-filter="journal">Journals</span>
+        <span class="chip" data-filter="chapter">Chapters</span>
+        <span class="chip" data-filter="talk">Talks</span>
+        <span class="chip" data-filter="poster">Posters</span>
+        <span class="chip" data-filter="attended">Attended</span>
+      </div>
+    </div>
+
+    <div class="toolbar" style="margin-top:12px">
+      <button class="btn primary" id="exportVisibleBib">Export Visible BibTeX (.bib)</button>
+      <button class="btn" id="expandAll">Expand All</button>
+      <button class="btn" id="collapseAll">Collapse All</button>
+      <button class="btn" id="syncScholar">Sync Google Scholar (citations)</button>
+    </div>
+
+    <p style="margin:12px 0 0 0; color:var(--muted); font-weight:700; font-size:14.5px;">
+      Google Scholar sync is supported via a tiny proxy endpoint (recommended). If not configured, the page still works fully (search/filter/BibTeX/export).
+    </p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<div class="container">
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <div class="card">
+        <h2 class="section-title">
+          Signature Highlights
+          <small>Fast signal of impact, breadth, and visibility</small>
+        </h2>
+
+        <div class="pub item journal" data-type="journal" data-year="2019" data-keywords="swelling porous media unsaturated multilayer ijhmt volume-averaging">
+          <p class="ptitle">Rigorous derivation of a new macroscopic model for partially saturated flow of a liquid in multilayered thin swelling porous media</p>
+          <p class="pmeta"><strong>A. Kaffel</strong> — <em>International Journal of Heat and Mass Transfer</em>, Vol. 129 (2019), pp. 1274–1286.</p>
+          <div class="tagrow">
+            <span class="tag key">Porous media</span><span class="tag key">Unsaturated flow</span><span class="tag gold">Selected</span>
+            <span class="tag gray">Citations: <b class="cites" data-scholar-title="Rigorous derivation of a new macroscopic model for partially saturated flow">—</b></span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058" target="_blank" rel="noopener">DOI</a>
+            <button class="btn" data-bibtex="@article{kaffel2019macroscopic, title={Rigorous derivation of a new macroscopic model for partially saturated flow of a liquid in multilayered thin swelling porous media}, author={Kaffel, Ahmed}, journal={International Journal of Heat and Mass Transfer}, volume={129}, pages={1274--1286}, year={2019}, doi={10.1016/j.ijheatmasstransfer.2018.10.058} }">BibTeX</button>
+          </div>
+        </div>
+
+        <div class="pub item journal" data-type="journal" data-year="2019" data-keywords="mass exchange closure unsaturated flow thin porous media ijhmt pillai feldkamp tower">
+          <p class="ptitle">A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media</p>
+          <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai, J. Feldkamp, T. Tower — <em>International Journal of Heat and Mass Transfer</em>, 2019.</p>
+          <div class="tagrow">
+            <span class="tag key">Multiscale modeling</span><span class="tag key">Porous media</span><span class="tag gold">Selected</span>
+            <span class="tag gray">Citations: <b class="cites" data-scholar-title="A new efficient mass exchange closure for modeling unsaturated flows">—</b></span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0017931018360897" target="_blank" rel="noopener">Publisher</a>
+            <button class="btn" data-bibtex="@article{kaffel2019massexchange, title={A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media}, author={Kaffel, Ahmed and Pillai, K. and Feldkamp, J. and Tower, T.}, journal={International Journal of Heat and Mass Transfer}, year={2019} }">BibTeX</button>
+          </div>
+        </div>
+
+        <div class="pub item journal" data-type="journal" data-year="2015" data-keywords="physics of fluids eigenspectra mode coalescence temporal instability two-fluid">
+          <p class="ptitle">Eigenspectra and mode coalescence of temporal instability in two-fluid flows</p>
+          <p class="pmeta"><strong>A. Kaffel</strong>, A. Riaz — <em>Physics of Fluids</em>, Vol. 27(4), 2015.</p>
+          <div class="tagrow">
+            <span class="tag key">Hydrodynamic stability</span><span class="tag key">Multiphase flow</span><span class="tag gold">Selected</span>
+            <span class="tag gray">Citations: <b class="cites" data-scholar-title="Eigenspectra and mode coalescence of temporal instability in two-fluid flows">—</b></span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="http://dx.doi.org/10.1063/1.4916404" target="_blank" rel="noopener">DOI</a>
+            <button class="btn" data-bibtex="@article{kaffel2015eigenspectra, title={Eigenspectra and mode coalescence of temporal instability in two-fluid flows}, author={Kaffel, Ahmed and Riaz, A.}, journal={Physics of Fluids}, volume={27}, number={4}, year={2015}, doi={10.1063/1.4916404} }">BibTeX</button>
+          </div>
+        </div>
+
+        <div class="pub item talk" data-type="talk" data-year="2017" data-keywords="nasa stennis naval research laboratory seminar waves instabilities">
+          <p class="ptitle">Waves and flow instabilities problems (Invited seminar)</p>
+          <p class="pmeta"><strong>A. Kaffel</strong> — NASA Stennis Space Center / U.S. Naval Research Laboratory, July 26–29, 2017.</p>
+          <div class="tagrow">
+            <span class="tag key">Invited</span><span class="tag gold">Selected</span>
+          </div>
+        </div>
+
+        <div class="pub item talk" data-type="talk" data-year="2019" data-keywords="caltech socams wavelet algorithms image reconstruction magnetic induction tomography">
+          <p class="ptitle">Wavelet algorithms for a high-resolution image reconstruction in magnetic induction tomography</p>
+          <p class="pmeta"><strong>A. Kaffel</strong> — SOCAMS, Caltech, Pasadena, CA, Apr 27, 2019.</p>
+          <div class="tagrow">
+            <span class="tag key">Invited</span><span class="tag key">Inverse problems</span><span class="tag gold">Selected</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="http://cmx.caltech.edu/socams/Talks2019.pdf" target="_blank" rel="noopener">Program PDF</a>
+          </div>
+        </div>
+
+        <div class="pub item talk" data-type="talk" data-year="2025" data-keywords="interpore 2025 albuquerque multiphase flow thin absorbent swelling porous materials">
+          <p class="ptitle">Modeling Multiphase Flow in Thin Absorbent Swelling Porous Materials</p>
+          <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2025, Albuquerque, NM, USA, May 19–22, 2025.</p>
+          <div class="tagrow">
+            <span class="tag key">Conference</span><span class="tag key">Porous media</span><span class="tag gold">Selected</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://events.interpore.org/event/56/contributions/7339/" target="_blank" rel="noopener">Conference Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL LIST — expandable sections -->
+      <div class="card" style="margin-top:18px">
+        <h2 class="section-title">
+          Complete Record
+          <small>Searchable • Filterable • Exportable</small>
+        </h2>
+
+        <details open class="bucket" data-bucket="journal">
+          <summary>
+            Peer-Reviewed Journal Publications
+            <span class="summary-right"><span class="badge" id="countJournal">—</span></span>
+          </summary>
+
+          <!-- JOURNALS (full list from your pasted file) -->
+          <div class="pub item journal" data-type="journal" data-year="2020" data-keywords="wavelet regularization ill-posed fredholm feldkamp inverse problems">
+            <p class="ptitle">Wavelet algorithms based on the regularization for the ill-posed Fredholm integral equations of the first kind</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, J. Feldkamp — <em>International Journal</em>, 2020 (as listed on your page).</p>
+            <div class="tagrow">
+              <span class="tag key">Inverse problems</span><span class="tag key">Wavelets</span>
+              <span class="tag gray">Citations: <b class="cites" data-scholar-title="Wavelet algorithms based on the regularization for the ill-posed Fredholm integral equations of the first kind">—</b></span>
+            </div>
+            <div class="actions">
+              <button class="btn" data-bibtex="@article{kaffel2020wavelet, title={Wavelet algorithms based on the regularization for the ill-posed Fredholm integral equations of the first kind}, author={Kaffel, Ahmed and Feldkamp, J.}, year={2020} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2019" data-keywords="mass exchange closure unsaturated thin porous media pillai feldkamp tower">
+            <p class="ptitle">A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai, J. Feldkamp, T. Tower — <em>International Journal of Heat and Mass Transfer</em>, 2019.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0017931018360897" target="_blank" rel="noopener">Publisher</a>
+              <button class="btn" data-bibtex="@article{kaffel2019massexchange, title={A new efficient mass exchange closure for modeling unsaturated flows and mass transport processes in thin porous media}, author={Kaffel, Ahmed and Pillai, K. and Feldkamp, J. and Tower, T.}, journal={International Journal of Heat and Mass Transfer}, year={2019} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2019" data-keywords="macroscopic model partially saturated multilayer thin swelling porous media ijhmt">
+            <p class="ptitle">Rigorous derivation of a new macroscopic model for modeling partially saturated flow of a liquid in multilayered thin swelling porous media</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — <em>International Journal of Heat and Mass Transfer</em>, Vol. 129 (2019), pp. 1274–1286.</p>
+            <div class="actions">
+              <a class="btn" href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{kaffel2019macroscopic, title={Rigorous derivation of a new macroscopic model for partially saturated flow of a liquid in multilayered thin swelling porous media}, author={Kaffel, Ahmed}, journal={International Journal of Heat and Mass Transfer}, volume={129}, pages={1274--1286}, year={2019}, doi={10.1016/j.ijheatmasstransfer.2018.10.058} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2015" data-keywords="eigenspectra mode coalescence temporal instability two-fluid physics of fluids riaz">
+            <p class="ptitle">Eigenspectra and mode coalescence of temporal instability in two-fluid flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, A. Riaz — <em>Physics of Fluids</em>, Vol. 27(4), 2015.</p>
+            <div class="actions">
+              <a class="btn" href="http://dx.doi.org/10.1063/1.4916404" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{kaffel2015eigenspectra, title={Eigenspectra and mode coalescence of temporal instability in two-fluid flows}, author={Kaffel, Ahmed and Riaz, A.}, journal={Physics of Fluids}, volume={27}, number={4}, year={2015}, doi={10.1063/1.4916404} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2016" data-keywords="waves instabilities microgap channels bar-cohen holloway riaz ijmf">
+            <p class="ptitle">Waves and instabilities in high quality adiabatic flow in microgap channels</p>
+            <p class="pmeta">S. A. Bar-Cohen, C. Holloway, <strong>A. Kaffel</strong>, A. Riaz — <em>International Journal of Multiphase Flow</em>, Vol. 83 (2016), pp. 62–76.</p>
+            <div class="actions">
+              <a class="btn" href="http://dx.doi.org/10.1016/j.ijmultiphaseflow.2016.03.016" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{barcohen2016waves, title={Waves and instabilities in high quality adiabatic flow in microgap channels}, author={Bar-Cohen, S. A. and Holloway, C. and Kaffel, Ahmed and Riaz, A.}, journal={International Journal of Multiphase Flow}, volume={83}, pages={62--76}, year={2016}, doi={10.1016/j.ijmultiphaseflow.2016.03.016} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2011" data-keywords="surface modes inviscid free surface shear flows zamm renardy">
+            <p class="ptitle">Surface modes in inviscid free surface shear flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — <em>ZAMM – Journal of Applied Mathematics and Mechanics</em>, Vol. 91(8) (2011), pp. 649–652.</p>
+            <div class="actions">
+              <a class="btn" href="https://doi.org/10.1002/zamm.201000165" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{kaffel2011surface, title={Surface modes in inviscid free surface shear flows}, author={Kaffel, Ahmed and Renardy, M.}, journal={ZAMM}, volume={91}, number={8}, pages={649--652}, year={2011}, doi={10.1002/zamm.201000165} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2010" data-keywords="stability plane parallel viscoelastic shear flows weissenberg reynolds renardy jnnfm">
+            <p class="ptitle">On the stability of plane parallel viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — <em>Journal of Non-Newtonian Fluid Mechanics</em>, Vol. 165 (2010), pp. 1670–1676.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0377025710002454?via%3Dihub" target="_blank" rel="noopener">Publisher</a>
+              <button class="btn" data-bibtex="@article{kaffel2010viscoelastic, title={On the stability of plane parallel viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers}, author={Kaffel, Ahmed and Renardy, M.}, journal={Journal of Non-Newtonian Fluid Mechanics}, volume={165}, pages={1670--1676}, year={2010} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2018" data-keywords="fuel cell polymer electrolyte membrane water transport modeling">
+            <p class="ptitle">On Modeling Water Transport in Polymer Electrolyte Membrane Fuel Cell</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — <em>Open Access Biostatistics & Bioinformatics</em>, 2018.</p>
+            <div class="actions">
+              <a class="btn" href="https://crimsonpublishers.com/oabb/pdf/OABB.000503.pdf" target="_blank" rel="noopener">PDF</a>
+              <button class="btn" data-bibtex="@article{kaffel2018pemfc, title={On Modeling Water Transport in Polymer Electrolyte Membrane Fuel Cell}, author={Kaffel, Ahmed}, journal={Open Access Biostatistics & Bioinformatics}, year={2018} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2018" data-keywords="bag-of-words multiscale color descriptors image analysis">
+            <p class="ptitle">A New Strategy of the Bag-of-Word Method with a Multi-scale Representation for Evaluating Color Pairwise Descriptors</p>
+            <p class="pmeta">F. Abdedayem, <strong>A. Kaffel</strong>, A. Ben Hamida — <em>Open Access Biostatistics & Bioinformatics</em>, 2018.</p>
+            <div class="actions">
+              <a class="btn" href="https://crimsonpublishers.com/oabb/abstract/OABB.000516.php" target="_blank" rel="noopener">Abstract</a>
+              <button class="btn" data-bibtex="@article{abdedayem2018bow, title={A New Strategy of the Bag-of-Word Method with a Multi-scale Representation for Evaluating Color Pairwise Descriptors}, author={Abdedayem, F. and Kaffel, Ahmed and Ben Hamida, A.}, journal={Open Access Biostatistics & Bioinformatics}, year={2018} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2015" data-keywords="naca2415 airfoil wind turbine wedging angle 30">
+            <p class="ptitle">Fluid dynamic study of a NACA2415 airfoil type wind turbine with a wedging angle equal to 30°</p>
+            <p class="pmeta">T. Chelbi, Z. Driss, <strong>A. Kaffel</strong>, M. Salah Abid — <em>International Journal of Fluid Mechanics and Thermal Sciences</em>, Vol. 1(3) (2015), pp. 54–58.</p>
+            <div class="actions">
+              <a class="btn" href="https://doi.org/10.11648/j.ijfmts.20150103.13" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{chelbi2015naca, title={Fluid dynamic study of a NACA2415 airfoil type wind turbine with a wedging angle equal to 30°}, author={Chelbi, T. and Driss, Z. and Kaffel, Ahmed and Abid, M. Salah}, journal={International Journal of Fluid Mechanics and Thermal Sciences}, volume={1}, number={3}, pages={54--58}, year={2015}, doi={10.11648/j.ijfmts.20150103.13} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2015" data-keywords="wind tunnel meshing model choice naca 2415 numerical experimental">
+            <p class="ptitle">Numerical and experimental investigations on the meshing model choice of a NACA 2415 airfoil wind turbine placed in an open wind tunnel</p>
+            <p class="pmeta">Z. Driss, T. Chelbi, W. Barhoumi, <strong>A. Kaffel</strong>, M.S. Abid — <em>Journal of Physical Mathematics</em>, Vol. 6(2) (2015), pp. 1–5.</p>
+            <div class="actions">
+              <a class="btn" href="http://dx.doi.org/10.4172/2090-0902.1000141" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@article{driss2015meshing, title={Numerical and experimental investigations on the meshing model choice of a NACA 2415 airfoil wind turbine placed in an open wind tunnel}, author={Driss, Z. and Chelbi, T. and Barhoumi, W. and Kaffel, Ahmed and Abid, M.S.}, journal={Journal of Physical Mathematics}, volume={6}, number={2}, year={2015}, doi={10.4172/2090-0902.1000141} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2014" data-keywords="static study wedging angle effect naca 2415">
+            <p class="ptitle">Static study of the wedging angle effect of a NACA 2415 airfoil type wind turbine</p>
+            <p class="pmeta">Z. Driss, T. Chelbi, <strong>A. Kaffel</strong>, M.S. Abid — <em>World Research Journal of Engineering and Technology</em>, Vol. 3(1) (2014), pp. 1–8.</p>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2013" data-keywords="instabilities gas liquid fluidized beds far east journal applied mathematics">
+            <p class="ptitle">Instabilities in gas- and liquid-fluidized beds</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — <em>Far East Journal of Applied Mathematics</em>, Vol. 80(1) (2013), pp. 19–39.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.pphmj.com/journals/articles/1126.htm" target="_blank" rel="noopener">Link</a>
+              <button class="btn" data-bibtex="@article{kaffel2013fluidized, title={Instabilities in gas- and liquid-fluidized beds}, author={Kaffel, Ahmed}, journal={Far East Journal of Applied Mathematics}, volume={80}, number={1}, pages={19--39}, year={2013} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2013" data-keywords="numerical simulation three-dimensional mixed convection lid-driven square cavity">
+            <p class="ptitle">Numerical simulation of three-dimensional mixed-convection in a lid-driven square cavity</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — <em>Far East Journal of Applied Mathematics</em>, Vol. 80(2) (2013), pp. 67–78.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.pphmj.com/journals/articles/1131.htm" target="_blank" rel="noopener">Link</a>
+              <button class="btn" data-bibtex="@article{kaffel2013convection, title={Numerical simulation of three-dimensional mixed-convection in a lid-driven square cavity}, author={Kaffel, Ahmed}, journal={Far East Journal of Applied Mathematics}, volume={80}, number={2}, pages={67--78}, year={2013} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item journal" data-type="journal" data-year="2010" data-keywords="wall friction momentum dispersion free surface flows non-uniform roughness">
+            <p class="ptitle">Wall friction and momentum dispersion in free surface flows with non uniform wall roughness</p>
+            <p class="pmeta">A. Soualmia, L. Masbernat, <strong>A. Kaffel</strong> — <em>Physical and Chemical News</em>, Vol. 51, pp. 11–18.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.pcnjournal.com/105102_1949.htm" target="_blank" rel="noopener">Link</a>
+              <button class="btn" data-bibtex="@article{soualmia2010wall, title={Wall friction and momentum dispersion in free surface flows with non uniform wall roughness}, author={Soualmia, A. and Masbernat, L. and Kaffel, Ahmed}, journal={Physical and Chemical News}, volume={51}, pages={11--18}, year={2010} }">BibTeX</button>
+            </div>
+          </div>
+
+        </details>
+
+        <details class="bucket" data-bucket="chapter">
+          <summary>
+            Book Chapters
+            <span class="summary-right"><span class="badge" id="countChapter">—</span></span>
+          </summary>
+
+          <div class="pub item chapter" data-type="chapter" data-year="2012" data-keywords="book chapter elastic effects inviscid instability shear flows nova science">
+            <p class="ptitle">Elastic effects on the inviscid instability of shear flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — In: <em>Turbulent Flows: Prediction, Modeling and Analysis</em>, Nova Science Publishers, 2012.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.gbv.de/dms/tib-ub-hannover/740080695.pdf" target="_blank" rel="noopener">Book PDF</a>
+              <button class="btn" data-bibtex="@incollection{kaffel2012elastic, title={Elastic effects on the inviscid instability of shear flows}, author={Kaffel, Ahmed}, booktitle={Turbulent Flows: Prediction, Modeling and Analysis}, publisher={Nova Science Publishers}, year={2012} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item chapter" data-type="chapter" data-year="2009" data-keywords="environmental hydraulics momentum dispersion wall friction crc press">
+            <p class="ptitle">Momentum dispersion and wall friction in free surface flows above non-uniform bottom roughness</p>
+            <p class="pmeta">A. Soualmia, L. Masbernat, S. Zaouali, <strong>A. Kaffel</strong> — In: <em>Environmental Hydraulics: Theoretical, Experimental and Computational Solutions</em>, CRC Press, 2009, pp. 97–101.</p>
+            <div class="actions">
+              <a class="btn" href="https://doi.org/10.1201/b10999" target="_blank" rel="noopener">DOI</a>
+              <button class="btn" data-bibtex="@incollection{soualmia2009momentum, title={Momentum dispersion and wall friction in free surface flows above non-uniform bottom roughness}, author={Soualmia, A. and Masbernat, L. and Zaouali, S. and Kaffel, Ahmed}, booktitle={Environmental Hydraulics: Theoretical, Experimental and Computational Solutions}, publisher={CRC Press}, year={2009}, pages={97--101}, doi={10.1201/b10999} }">BibTeX</button>
+            </div>
+          </div>
+
+          <div class="pub item chapter" data-type="chapter" data-year="2026" data-keywords="wicking porous materials chapter 3 modeling unsaturated flow multilayer swelling forthcoming">
+            <p class="ptitle">Modeling Unsaturated Flow in Thin Multi-Layered Media made of Absorbent Swelling Porous Materials (Chapter 3, forthcoming)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — In: <em>Wicking in Porous Materials</em>, 2026 (forthcoming).</p>
+            <div class="tagrow"><span class="tag gold">Forthcoming</span><span class="tag key">Porous media</span></div>
+            <div class="actions">
+              <button class="btn" data-bibtex="@incollection{kaffel2026wicking, title={Modeling Unsaturated Flow in Thin Multi-Layered Media made of Absorbent Swelling Porous Materials}, author={Kaffel, Ahmed}, booktitle={Wicking in Porous Materials}, year={2026}, note={forthcoming} }">BibTeX</button>
+            </div>
+          </div>
+
+        </details>
+
+        <details class="bucket" data-bucket="talk">
+          <summary>
+            Invited Talks & Conference Presentations
+            <span class="summary-right"><span class="badge" id="countTalk">—</span></span>
+          </summary>
+
+          <!-- TALKS (full list from your pasted file) -->
+          <div class="pub item talk" data-type="talk" data-year="2025" data-keywords="interpore 2025 albuquerque multiphase flow thin absorbent swelling porous materials">
+            <p class="ptitle">Modeling Multiphase Flow in Thin Absorbent Swelling Porous Materials</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2025, Albuquerque, NM, USA, May 19–22, 2025.</p>
+            <div class="actions">
+              <a class="btn" href="https://events.interpore.org/event/56/contributions/7339/" target="_blank" rel="noopener">Conference page</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2019" data-keywords="ic3m 2019 mechanics mechatronics materials two-phase annular flow instability microchannels">
+            <p class="ptitle">Two-phase annular flow instability in microchannels</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — IC3M’2019, Sousse, Tunisia, Dec 20–22, 2019.</p>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2019" data-keywords="caltech socams wavelet algorithms high-resolution image reconstruction magnetic induction tomography">
+            <p class="ptitle">Wavelet algorithms for a high-resolution image reconstruction in magnetic induction tomography</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — SOCAMS, Caltech, Pasadena, CA, Apr 27, 2019.</p>
+            <div class="actions">
+              <a class="btn" href="http://cmx.caltech.edu/socams/Talks2019.pdf" target="_blank" rel="noopener">Program PDF</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2018" data-keywords="interpore 2018 new orleans partially-saturated multilayer thin swelling porous media">
+            <p class="ptitle">On modeling partially-saturated flow of a liquid in multilayered thin swelling porous media</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2018, New Orleans, USA, May 14–17, 2018.</p>
+            <div class="actions">
+              <a class="btn" href="https://events.interpore.org/event/2/contributions/470/" target="_blank" rel="noopener">Conference page</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2017" data-keywords="nasa stennis naval research laboratory seminar waves flow instabilities">
+            <p class="ptitle">Waves and flow instabilities problems</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — NASA Stennis Space Center / U.S. Naval Research Laboratory, July 26–29, 2017.</p>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2016" data-keywords="porous media annual meeting cincinnati 2016 unsaturated flow multilayer thin swelling">
+            <p class="ptitle">On modeling unsaturated flow of a liquid through multiple layers of thin, swelling porous media</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai — 8th International Conference on Porous Media & Annual Meeting, Cincinnati, OH, USA, May 9–12, 2016.</p>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2014" data-keywords="ittw 2014 two-phase systems ground space applications annular flow instability microgap channels">
+            <p class="ptitle">Annular flow instability in microgap channels</p>
+            <p class="pmeta">C. Holloway, <strong>A. Kaffel</strong>, A. Bar-Cohen, A. Riaz — ITTW 2014, Baltimore, MD, USA, Sept 2014.</p>
+            <div class="actions">
+              <a class="btn" href="http://ittw2014.umd.edu/" target="_blank" rel="noopener">Conference site</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2013" data-keywords="aps dfd 2013 pittsburgh linear stability analysis thin films shear flow">
+            <p class="ptitle">Linear stability analysis of thin films in wall bounded shear flow</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, A. Riaz — APS DFD Annual Meeting, Pittsburgh, PA, USA, Nov 2013.</p>
+            <div class="actions">
+              <a class="btn" href="http://meetings.aps.org/Meeting/DFD13/Session/L9.8" target="_blank" rel="noopener">APS listing</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2013" data-keywords="johns hopkins 2013 symposium evaporating liquid films shear flows burgers program">
+            <p class="ptitle">Linear stability analysis of evaporating liquid films in wall-bounded shear flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, A. Riaz — Johns Hopkins University, May 2013.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.burgers.umd.edu/documents/2013-joint-gwu-jhu-umd-symposium.pdf" target="_blank" rel="noopener">Program PDF</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2012" data-keywords="aps dfd 2012 san diego stability two-layer channel flow">
+            <p class="ptitle">On the stability of two-layer channel flow</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — APS DFD Annual Meeting, San Diego, CA, USA, Nov 2012.</p>
+            <div class="actions">
+              <a class="btn" href="http://meetings.aps.org/Meeting/DFD12/Event/178771" target="_blank" rel="noopener">APS listing</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2012" data-keywords="cai ms scmai canadian symposium fluid dynamics particulate flows fluidized beds spiteri">
+            <p class="ptitle">Modeling and numerical simulation of particulate flows in fluidized beds</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, R. Spiteri — Canadian Symposium on Fluid Dynamics / CAIMS-SCMAI, Toronto, Canada, June 2012.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.fields.utoronto.ca/programs/scientific/11-12/CAIMS_SCMAI/csfd.html" target="_blank" rel="noopener">Conference page</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2013" data-keywords="plenary cefd 2013 sfax tunisia shear flow instabilities viscoelastic fluids">
+            <p class="ptitle">Shear flow instabilities in viscoelastic fluids (Plenary)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — CEFD 2013, Sfax, Tunisia, Mar 18–20, 2013.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.enis.rnu.tn/Manifestation/piece%20jointes/CEFD2013.pdf" target="_blank" rel="noopener">Program</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2011" data-keywords="siam geosciences 2011 long beach short wave instabilities free surface shear flows">
+            <p class="ptitle">Short wave instabilities in free surface shear flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — SIAM GS11, Long Beach, CA, USA, Mar 21–24, 2011.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.siam.org/meetings/gs11/reginfo.php" target="_blank" rel="noopener">Conference info</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2011" data-keywords="siam geosciences 2011 long beach elastic effect stability viscoelastic shear flows">
+            <p class="ptitle">Elastic effect on the stability of viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — SIAM GS11, Long Beach, CA, USA, Mar 21–24, 2011.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.siam.org/meetings/gs11/reginfo.php" target="_blank" rel="noopener">Conference info</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2011" data-keywords="ams jmm 2011 new orleans surface modes inviscid free surface shear flows">
+            <p class="ptitle">Surface modes in inviscid free surface shear flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — AMS Session, Joint Mathematics Meetings, New Orleans, LA, USA, Jan 6–9, 2011.</p>
+            <div class="actions">
+              <a class="btn" href="http://jointmathematicsmeetings.org/meetings/national/jmm/2125_progfull.html" target="_blank" rel="noopener">Program</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2010" data-keywords="ams sectional 2010 syracuse barotropic instability geophysical fluid dynamics">
+            <p class="ptitle">Barotropic instability in Geophysical Fluid Dynamics</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — AMS Fall Eastern Sectional Meeting, Syracuse, NY, USA, Oct 2–3, 2010.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.ams.org/meetings/sectional/2176_program_sunday.html" target="_blank" rel="noopener">Program</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2010" data-keywords="ams sectional 2010 los angeles linear instability viscoelastic shear flows">
+            <p class="ptitle">Linear instability of plane parallel viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — AMS Fall Western Sectional Meeting, Los Angeles, CA, USA, Oct 9–10, 2010.</p>
+            <div class="actions">
+              <a class="btn" href="http://www.ams.org/meetings/sectional/2170_progfull.html" target="_blank" rel="noopener">Program</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2010" data-keywords="facm 2010 njit newark frontiers applied computational mathematics">
+            <p class="ptitle">On the stability of plane parallel viscoelastic shear flows in the limit of infinite Weissenberg and Reynolds numbers</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — FACM 10, NJIT, Newark, NJ, USA, May 21–23, 2010.</p>
+            <div class="actions">
+              <a class="btn" href="https://m.njit.edu/Events/FACM10/program.html" target="_blank" rel="noopener">Program</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2009" data-keywords="siam annual meeting 2009 denver boundary element method potential flow underwater vehicle">
+            <p class="ptitle">Simulation of the potential flow using the Boundary Element method with higher order elements for control of an underwater vehicle</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — SIAM Annual Meeting, Denver, CO, USA, July 6–10, 2009.</p>
+            <div class="actions">
+              <a class="btn" href="http://meetings.siam.org/sess/dsp_talk.cfm?p=30507" target="_blank" rel="noopener">Session</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2009" data-keywords="siam control 2009 denver secondary flows transverse distribution averaged velocity free surface flows">
+            <p class="ptitle">Effects of secondary flows on the transverse distribution of averaged velocity in free surface flows</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — SIAM Conference on Control and Its Applications, Denver, CO, USA, July 6–10, 2009.</p>
+            <div class="actions">
+              <a class="btn" href="http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=8908" target="_blank" rel="noopener">Session</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2009" data-keywords="fluid mechanics symposium virginia tech 2009 closure 2d saint venant free surface flows">
+            <p class="ptitle">Closure of a 2D Saint Venant model for free surface flows on rough bottoms</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — Fall Fluid Mechanics Symposium, Virginia Tech, Nov 10, 2009.</p>
+            <div class="actions">
+              <a class="btn" href="http://seb199.me.vt.edu/fluidsarchive/fluids2009/abstracts.html" target="_blank" rel="noopener">Abstracts</a>
+            </div>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2011" data-keywords="iciam 2011 ubc vancouver complex fluids flows industry nature">
+            <p class="ptitle">On the stability of plane parallel viscoelastic shear flows (invited)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Renardy — ICIAM 2011, University of British Columbia, Vancouver, Canada, July 2011.</p>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2011" data-keywords="carnegie mellon 2011 workshop turbulence mixing instabilities fluidized beds">
+            <p class="ptitle">Instabilities in fluidized beds (invited)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — Carnegie Mellon University, Pittsburgh, PA, Oct 13–16, 2011.</p>
+          </div>
+
+          <div class="pub item talk" data-type="talk" data-year="2008" data-keywords="icAmem 2008 simulation flow dynamics unmanned underwater vehicle">
+            <p class="ptitle">Simulation of flow and dynamics for Unmanned Underwater Vehicle</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Sahraoui, A. Chtourou — ICAMEM 2008, Sousse, Tunisia, Dec 16–18, 2008.</p>
+            <div class="actions">
+              <a class="btn" href="http://www2.esm.vt.edu/~rbatra/ICAMEM2008_Brochure_Poster.pdf" target="_blank" rel="noopener">Brochure</a>
+            </div>
+          </div>
+
+        </details>
+
+        <details class="bucket" data-bucket="poster">
+          <summary>
+            Posters
+            <span class="summary-right"><span class="badge" id="countPoster">—</span></span>
+          </summary>
+
+          <div class="pub item poster" data-type="poster" data-year="2018" data-keywords="interpore 2018 poster wicking partially saturated flow swelling porous media">
+            <p class="ptitle">Wicking as partially-saturated flow of a liquid in thin swelling porous media (Poster)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, K. Pillai — InterPore 2018, New Orleans, USA, May 14–17, 2018.</p>
+            <div class="actions">
+              <a class="btn" href="https://events.interpore.org/event/2/contributions/910/contribution.pdf" target="_blank" rel="noopener">Poster PDF</a>
+            </div>
+          </div>
+
+          <div class="pub item poster" data-type="poster" data-year="2025" data-keywords="siam great lakes 2025 poster unsaturated flow swelling porous media illinois institute of technology">
+            <p class="ptitle">Advanced Multiscale Modeling and Simulation of Unsaturated Flow in Swelling Porous Media (Poster)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong> — SIAM Great Lakes Section Annual Meeting, Illinois Institute of Technology, Sept 27–28, 2025.</p>
+            <div class="actions">
+              <a class="btn" href="https://sites.google.com/view/glsiam2025/home?authuser=0" target="_blank" rel="noopener">Meeting page</a>
+            </div>
+          </div>
+
+          <div class="pub item poster" data-type="poster" data-year="2009" data-keywords="project next poster joint mathematics meetings washington dc control unmanned underwater vehicle">
+            <p class="ptitle">Control of Unmanned Underwater Vehicle (Poster, Project NExT / Young Mathematician’s Network)</p>
+            <p class="pmeta"><strong>A. Kaffel</strong>, M. Sahraoui, S. Choura, A. Nayfeh — Joint Mathematics Meetings, Washington, DC, USA, Jan 5–8, 2009.</p>
+          </div>
+
+        </details>
+
+        <details class="bucket" data-bucket="attended">
+          <summary>
+            Other Attended Conferences
+            <span class="summary-right"><span class="badge" id="countAttended">—</span></span>
+          </summary>
+
+          <div class="pub item attended" data-type="attended" data-year="2025" data-keywords="socams 2025 ucr riverside">
+            <p class="ptitle">SOCAMS 2025</p>
+            <p class="pmeta">University of California, Riverside (UCR), Riverside, CA — April 2025. <a href="https://www.math.uci.edu/node/38364" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2024" data-keywords="ams 2024 deep learning numerical pde solvers spring central sectional meeting milwaukee">
+            <p class="ptitle">AMS 2024 Spring Central Sectional Meeting — Special Session: Recent Advances in Numerical PDE Solvers by Deep Learning</p>
+            <p class="pmeta">Milwaukee, WI — April 2024. <a href="https://www.ams.org/meetings/sectional/2318_progfull.html" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2018" data-keywords="jmm 2018 san diego">
+            <p class="ptitle">Joint Mathematics Meetings (JMM 2018)</p>
+            <p class="pmeta">San Diego, CA — Jan 9–14, 2018. <a href="http://jointmathematicsmeetings.org/meetings/national/jmm2018/2197_intro" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2016" data-keywords="burgers symposium 2016 umd">
+            <p class="ptitle">Burgers Symposium (13th Annual)</p>
+            <p class="pmeta">University of Maryland, College Park — Nov 16, 2016. <a href="http://www.burgers.umd.edu/" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2016" data-keywords="porous media annual meeting cincinnati 2016">
+            <p class="ptitle">8th International Conference on Porous Media & Annual Meeting</p>
+            <p class="pmeta">Cincinnati, OH — May 9–12, 2016. <a href="https://www.interpore.org/events/8th-international-conference-on" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2012" data-keywords="burgers symposium 2012 umd">
+            <p class="ptitle">Ninth Annual Burgers Symposium</p>
+            <p class="pmeta">University of Maryland, College Park — Nov 14, 2012. <a href="http://archive.is/20121210120400/www.burgers.umd.edu/#selection-109.0-109.68" target="_blank" rel="noopener">Archive link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2011" data-keywords="siam cse 2011 reno">
+            <p class="ptitle">SIAM Conference on Computational Science and Engineering (CSE11)</p>
+            <p class="pmeta">Reno, NV — Feb 28–Mar 4, 2011. <a href="http://www.siam.org/meetings/cse11/" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+          <div class="pub item attended" data-type="attended" data-year="2010" data-keywords="jmm 2010 san francisco">
+            <p class="ptitle">Joint Mathematics Meetings (JMM 2010)</p>
+            <p class="pmeta">San Francisco, CA — Jan 13–16, 2010. <a href="http://jointmathematicsmeetings.org/meetings/national/jmm/2124_program_tuesday.html" target="_blank" rel="noopener">Link</a></p>
+          </div>
+
+        </details>
+
+      </div>
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside class="card side" aria-label="Highlights">
+      <h3>Employer-Focused Signals</h3>
+
+      <div class="stat"><span>Total items</span> <b id="statTotal">—</b></div>
+      <div class="stat"><span>Journal papers</span> <b id="statJournals">—</b></div>
+      <div class="stat"><span>Book chapters</span> <b id="statChapters">—</b></div>
+      <div class="stat"><span>Talks</span> <b id="statTalks">—</b></div>
+      <div class="stat"><span>Posters</span> <b id="statPosters">—</b></div>
+
+      <div class="mini">
+        <h3>Research profile</h3>
+        <div class="kv"><strong>Core:</strong> Multiphase flow • Porous media • Inverse problems • Scientific computing</div>
+        <div class="kv"><strong>Visibility:</strong> NASA Stennis / NRL • Caltech • SIAM • AMS • APS • InterPore</div>
+      </div>
+
+      <div class="mini">
+        <h3>Quick links</h3>
+        <div class="kv">
+          <strong>Scholar:</strong>
+          <a href="https://scholar.google.com/citations?hl=en&user=qsyguP4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+        <div class="kv"><strong>Export:</strong> Use “Export Visible BibTeX” to generate a clean .bib for your CV/website.</div>
+      </div>
+
+      <div class="mini">
+        <h3>How Scholar sync works</h3>
+        <p style="margin:0; color:var(--muted); font-size:14.8px;">
+          This page supports automatic citation updates via a small proxy endpoint (recommended). If not enabled, citation counts remain “—”.
+        </p>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="foot">
+    © <span id="year"></span> Dr. Ahmed Kaffel — Publications • Scientific Computing • Applied Mathematics • Porous Media • CFD • Inverse Problems
+  </div>
+</div>
+
+<script>
+/* =========================
+   Helpers
+========================= */
+const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+const $  = (sel, root=document) => root.querySelector(sel);
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const chips = $$(".chip");
+const items = $$(".item");
+const q = $("#q");
+
+function setCounts(){
+  const total = items.length;
+  const journals = items.filter(x=>x.dataset.type==="journal").length;
+  const chapters = items.filter(x=>x.dataset.type==="chapter").length;
+  const talks = items.filter(x=>x.dataset.type==="talk").length;
+  const posters = items.filter(x=>x.dataset.type==="poster").length;
+  const attended = items.filter(x=>x.dataset.type==="attended").length;
+
+  $("#statTotal").textContent = total;
+  $("#statJournals").textContent = journals;
+  $("#statChapters").textContent = chapters;
+  $("#statTalks").textContent = talks;
+  $("#statPosters").textContent = posters;
+
+  $("#countJournal").textContent = journals;
+  $("#countChapter").textContent = chapters;
+  $("#countTalk").textContent = talks;
+  $("#countPoster").textContent = posters;
+  $("#countAttended").textContent = attended;
+}
+setCounts();
+
+function applyFilter(){
+  const active = $(".chip.active")?.dataset.filter || "all";
+  const query = (q.value || "").trim().toLowerCase();
+
+  items.forEach(el=>{
+    const typeOk = (active === "all") ? true : (el.dataset.type === active);
+    const text = el.textContent.toLowerCase();
+    const keywords = (el.getAttribute("data-keywords") || "").toLowerCase();
+    const queryOk = (!query) ? true : (text.includes(query) || keywords.includes(query));
+    el.classList.toggle("hidden", !(typeOk && queryOk));
+  });
+}
+
+chips.forEach(ch=>{
+  ch.addEventListener("click", ()=>{
+    chips.forEach(x=>x.classList.remove("active"));
+    ch.classList.add("active");
+    applyFilter();
+  });
+});
+q.addEventListener("input", applyFilter);
+applyFilter();
+
+/* =========================
+   Expand/collapse all
+========================= */
+$("#expandAll").addEventListener("click", ()=>{
+  $$(".bucket").forEach(d=> d.open = true);
+});
+$("#collapseAll").addEventListener("click", ()=>{
+  $$(".bucket").forEach(d=> d.open = false);
+});
+
+/* =========================
+   BibTeX per-item + export visible
+========================= */
+function downloadText(filename, text){
+  const blob = new Blob([text], {type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+document.addEventListener("click", (e)=>{
+  const btn = e.target.closest("button[data-bibtex]");
+  if(!btn) return;
+  const bib = btn.getAttribute("data-bibtex") || "";
+  downloadText("kaffel_publication.bib", bib.trim() + "\n");
+});
+
+$("#exportVisibleBib").addEventListener("click", ()=>{
+  const visibleBib = [];
+  $$("button[data-bibtex]").forEach(btn=>{
+    const pub = btn.closest(".item");
+    if(pub && !pub.classList.contains("hidden")){
+      const bib = (btn.getAttribute("data-bibtex") || "").trim();
+      if(bib) visibleBib.push(bib);
+    }
+  });
+  if(visibleBib.length === 0){
+    alert("No BibTeX entries are visible (try filter = All).");
+    return;
+  }
+  downloadText("kaffel_visible_publications.bib", visibleBib.join("\n\n") + "\n");
+});
+
+/* =========================
+   Google Scholar sync (citations)
+   IMPORTANT: needs a proxy endpoint due to CORS/bot protection.
+
+   Expected proxy response JSON shape:
+   {
+     "profile": { "citations": 1234, "h_index": 18, "i10_index": 25 },
+     "works": [
+       { "title":"...", "cited_by": 42, "year":"2019" },
+       ...
+     ]
+   }
+========================= */
+async function syncScholar(){
+  // Change this URL to your own endpoint if you set it up (see snippet below).
+  const defaultEndpoint = "/api/scholar?user=qsyguP4AAAAJ";
+  const endpoint = prompt(
+    "Enter your Scholar sync endpoint (proxy URL).",
+    defaultEndpoint
+  );
+  if(!endpoint) return;
+
+  try{
+    const res = await fetch(endpoint, {credentials:"same-origin"});
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+
+    // Map works by normalized title
+    const map = new Map();
+    (data.works || []).forEach(w=>{
+      const key = (w.title || "").toLowerCase().replace(/\s+/g," ").trim();
+      if(key) map.set(key, w.cited_by ?? w.citations ?? w.citedby ?? null);
+    });
+
+    // Fill citation placeholders
+    $$(".cites").forEach(el=>{
+      const t = (el.getAttribute("data-scholar-title") || "").toLowerCase().replace(/\s+/g," ").trim();
+      const v = map.get(t);
+      el.textContent = (v === null || v === undefined) ? "—" : String(v);
+    });
+
+    alert("Google Scholar sync complete. Citation counts updated where titles matched.");
+  }catch(err){
+    console.error(err);
+    alert("Scholar sync failed. This usually means the proxy endpoint is not configured or blocked.\n\nDetails: " + err.message);
+  }
+}
+$("#syncScholar").addEventListener("click", syncScholar);
+
+</script>
+
+</body>
+</html>
