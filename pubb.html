@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Publications | Dr. Ahmed Kaffel</title>
+
+<meta name="description" content="Complete list of peer-reviewed publications, book chapters, invited talks, and conference presentations by Dr. Ahmed Kaffel.">
+
+<style>
+
+:root{
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:#e5e7eb;
+  --bg:#ffffff;
+  --soft:#f8fafc;
+  --brand:#002855;
+  --accent:#fdb515;
+  --card:#ffffff;
+  --shadow:0 10px 30px rgba(15,23,42,.08);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  line-height:1.7;
+}
+
+
+/* NAV */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(0,40,85,.98);
+}
+
+.nav .wrap{
+  max-width:1180px;
+  margin:auto;
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.brand{
+  color:white;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.links{
+  display:flex;
+  gap:18px;
+}
+
+.links a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.links a:hover{
+  color:var(--accent);
+}
+
+
+/* HERO */
+
+.hero{
+  max-width:1180px;
+  margin:auto;
+  padding:50px 18px 20px;
+}
+
+.hero-card{
+  background:
+  radial-gradient(1000px 300px at 20% 0%,rgba(253,181,21,.18),transparent),
+  white;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  padding:32px;
+}
+
+.kicker{
+  color:var(--brand);
+  font-weight:800;
+  font-size:13px;
+}
+
+h1{
+  margin:12px 0;
+  font-size:38px;
+}
+
+.subtitle{
+  color:var(--muted);
+  font-size:18px;
+}
+
+.search{
+  margin-top:18px;
+}
+
+.search input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  font-size:15px;
+}
+
+
+/* LAYOUT */
+
+.container{
+  max-width:1180px;
+  margin:auto;
+  padding:18px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap:18px;
+}
+
+.card{
+  background:white;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+.section-title{
+  font-size:22px;
+  color:var(--brand);
+  margin-bottom:12px;
+}
+
+
+/* PUBLICATIONS */
+
+.pub{
+  border-top:1px solid var(--line);
+  padding:14px 0;
+}
+
+.pub:first-child{
+  border-top:none;
+}
+
+.pub-title{
+  font-weight:700;
+}
+
+.pub-meta{
+  color:var(--muted);
+  font-size:15px;
+}
+
+.links-row{
+  margin-top:6px;
+}
+
+.links-row a{
+  color:var(--brand);
+  font-weight:600;
+  text-decoration:none;
+  margin-right:12px;
+}
+
+.links-row a:hover{
+  color:var(--accent);
+}
+
+
+/* SIDEBAR */
+
+.side{
+  position:sticky;
+  top:80px;
+}
+
+.metric{
+  border-top:1px solid var(--line);
+  padding-top:10px;
+  margin-top:10px;
+}
+
+.metric strong{
+  color:var(--brand);
+}
+
+
+/* FOOTER */
+
+.footer{
+  margin-top:30px;
+  text-align:center;
+  color:var(--muted);
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- NAV -->
+
+<div class="nav">
+<div class="wrap">
+
+<a class="brand" href="index.html">
+Dr. Ahmed Kaffel
+</a>
+
+<div class="links">
+<a href="index.html">Home</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="teaching.html">Teaching</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-card">
+
+<div class="kicker">
+Research Output • Publications • Invited Talks • Scientific Contributions
+</div>
+
+<h1>
+Publications and Scientific Contributions
+</h1>
+
+<p class="subtitle">
+Complete peer-reviewed journal publications, book chapters, invited talks, and conference presentations across applied mathematics, scientific computing, fluid dynamics, porous media, and inverse problems.
+</p>
+
+<div class="search">
+<input id="searchBox" placeholder="Search publications, journals, talks, keywords...">
+</div>
+
+</div>
+
+</section>
+
+
+
+<div class="container">
+
+<div class="grid">
+
+
+<!-- LEFT COLUMN -->
+
+<main>
+
+
+<!-- JOURNAL PAPERS -->
+
+<div class="card">
+
+<h2 class="section-title">
+Peer-Reviewed Journal Publications
+</h2>
+
+
+<div class="pub searchable">
+<div class="pub-title">Rigorous derivation of a macroscopic model for partially saturated flow in multilayered swelling porous media</div>
+<div class="pub-meta">International Journal of Heat and Mass Transfer, 2019</div>
+<div class="links-row">
+<a href="https://doi.org/10.1016/j.ijheatmasstransfer.2018.10.058">DOI</a>
+</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Mass exchange closure for modeling unsaturated flow in thin porous media</div>
+<div class="pub-meta">International Journal of Heat and Mass Transfer, 2019</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Eigenspectra and mode coalescence of temporal instability in two-fluid flows</div>
+<div class="pub-meta">Physics of Fluids, 2015</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Waves and instabilities in high quality adiabatic flow in microgap channels</div>
+<div class="pub-meta">International Journal of Multiphase Flow, 2016</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Surface modes in inviscid free surface shear flows</div>
+<div class="pub-meta">ZAMM Journal of Applied Mathematics and Mechanics, 2011</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">On stability of plane parallel viscoelastic shear flows</div>
+<div class="pub-meta">Journal of Non-Newtonian Fluid Mechanics, 2010</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Instabilities in fluidized beds</div>
+<div class="pub-meta">Far East Journal of Applied Mathematics</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Numerical simulation of mixed convection in square cavity</div>
+<div class="pub-meta">Far East Journal of Applied Mathematics</div>
+</div>
+
+
+</div>
+
+
+
+
+<!-- BOOK CHAPTERS -->
+
+<div class="card">
+
+<h2 class="section-title">
+Book Chapters
+</h2>
+
+
+<div class="pub searchable">
+<div class="pub-title">
+Elastic effects on instability of shear flows
+</div>
+
+<div class="pub-meta">
+Nova Science Publishers, 2012
+</div>
+
+</div>
+
+
+<div class="pub searchable">
+
+<div class="pub-title">
+Momentum dispersion and wall friction in free surface flows
+</div>
+
+<div class="pub-meta">
+CRC Press, 2009
+</div>
+
+</div>
+
+
+<div class="pub searchable">
+
+<div class="pub-title">
+Modeling Unsaturated Flow in Swelling Porous Materials (forthcoming)
+</div>
+
+<div class="pub-meta">
+Wicking in Porous Materials, 2026
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+<!-- TALKS -->
+
+<div class="card">
+
+<h2 class="section-title">
+Invited Talks and Conference Presentations
+</h2>
+
+
+<div class="pub searchable">
+<div class="pub-title">NASA Stennis Space Center invited seminar</div>
+<div class="pub-meta">2017</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">Caltech Applied Mathematics Symposium</div>
+<div class="pub-meta">2019</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">InterPore International Conference</div>
+<div class="pub-meta">2018, 2025</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">APS Division of Fluid Dynamics</div>
+<div class="pub-meta">2012, 2013</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">SIAM Conferences</div>
+<div class="pub-meta">2009-2025</div>
+</div>
+
+
+<div class="pub searchable">
+<div class="pub-title">AMS Conferences</div>
+<div class="pub-meta">2010-2024</div>
+</div>
+
+
+</div>
+
+
+
+</main>
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="card side">
+
+
+<h3>
+Research Metrics
+</h3>
+
+<div class="metric">
+<strong>Peer-Reviewed Publications</strong><br>
+20+
+</div>
+
+<div class="metric">
+<strong>Invited Talks</strong><br>
+30+
+</div>
+
+<div class="metric">
+<strong>Major Venues</strong><br>
+NASA • Caltech • SIAM • AMS • APS • InterPore
+</div>
+
+<div class="metric">
+<strong>Research Areas</strong><br>
+Applied Mathematics<br>
+Scientific Computing<br>
+Fluid Dynamics<br>
+Porous Media<br>
+Inverse Problems
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+
+<div class="footer">
+© Dr. Ahmed Kaffel
+</div>
+
+
+</div>
+
+
+
+<script>
+
+const searchBox=document.getElementById("searchBox");
+
+searchBox.addEventListener("input",function(){
+
+const value=this.value.toLowerCase();
+
+document.querySelectorAll(".searchable").forEach(el=>{
+
+el.style.display=
+el.innerText.toLowerCase().includes(value)
+?"block":"none";
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
